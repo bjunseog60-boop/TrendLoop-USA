@@ -1,0 +1,61 @@
+# ============================================================
+# TrendLoop USA - 매일 자동 실행 워크플로우
+# ============================================================
+# 매일 오전 9시(미국 동부시간, UTC 14시)에 자동 실행됩니다.
+# 수동 실행도 가능합니다 (Actions 탭 → Run workflow 버튼).
+
+name: TrendLoop USA Daily Run
+
+on:
+  # 매일 UTC 14:00 (미국 동부 9AM, 한국 밤 11PM)
+  schedule:
+    - cron: "0 14 * * *"
+
+  # 수동 실행 버튼 활성화
+  workflow_dispatch:
+
+# GitHub Pages 배포 권한
+permissions:
+  contents: write
+  pages: write
+
+jobs:
+  run-trendloop:
+    runs-on: ubuntu-latest
+
+    steps:
+      # ── 1. 코드 체크아웃 ──
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── 2. Python 설치 ──
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # ── 3. 패키지 설치 ──
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # ── 4. TrendLoop 메인 스크립트 실행 ──
+      - name: Run TrendLoop USA
+        env:
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          AMAZON_TAG: ${{ secrets.AMAZON_TAG }}
+          BLOG_BASE_URL: ${{ secrets.BLOG_BASE_URL }}
+        run: python main.py
+
+      # ── 5. 생성된 블로그 글을 저장소에 커밋 ──
+      - name: Commit and push new blog post
+        run: |
+          git config user.name "TrendLoop Bot"
+          git config user.email "trendloop-bot@users.noreply.github.com"
+          git add docs/
+          git diff --staged --quiet || git commit -m "Add daily blog post $(date +%Y-%m-%d)"
+          git push
