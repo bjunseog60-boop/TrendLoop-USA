@@ -22,6 +22,7 @@ permissions:
 jobs:
   run-trendloop:
     runs-on: ubuntu-latest
+    timeout-minutes: 10    # 10분 넘으면 자동 종료 (무한 루프 방지)
 
     steps:
       # ── 1. 코드 체크아웃 ──
