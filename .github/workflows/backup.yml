@@ -1,0 +1,52 @@
+name: TrendLoop Server Backup
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # Daily at 6 AM UTC (1 AM EST)
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Backup server code
+        run: |
+          # Sync code from server to repo
+          rsync -avz --exclude='venv/' \
+                     --exclude='__pycache__/' \
+                     --exclude='*.pyc' \
+                     --exclude='.env' \
+                     --exclude='google_creds.json' \
+                     --exclude='gcloud-adc.json' \
+                     --exclude='_backups/' \
+                     --exclude='_deleted_items/' \
+                     --exclude='logs/' \
+                     --exclude='data/shorts/' \
+                     -e "ssh -i ~/.ssh/id_rsa" \
+                     ubuntu@${{ secrets.EC2_HOST }}:/home/ubuntu/TrendLoop-USA/ \
+                     ./server-backup/
+
+      - name: Backup server status
+        run: |
+          ssh -i ~/.ssh/id_rsa ubuntu@${{ secrets.EC2_HOST }} \
+            "cd /home/ubuntu/TrendLoop-USA && source venv/bin/activate && python3 monitor.py" \
+            > ./server-backup/last_health_check.txt 2>&1 || true
+
+      - name: Commit and push backup
+        run: |
+          git config user.name "TrendLoop Bot"
+          git config user.email "bot@trendloopusa.net"
+          git add server-backup/
+          TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
+          git diff --cached --quiet || git commit -m "Auto backup: ${TIMESTAMP}"
+          git push

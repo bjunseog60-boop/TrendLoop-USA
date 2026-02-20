@@ -1,0 +1,12 @@
+venv/
+__pycache__/
+*.pyc
+.env
+google_creds.json
+gcloud-adc.json
+_backups/
+_deleted_items/
+logs/
+data/shorts/
+*.mp3
+profile_pic.*

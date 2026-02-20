@@ -1,0 +1,380 @@
+[
+  {
+    "day": 1,
+    "slot": 1,
+    "title": "The Complete Guide to Modern Business Casual Workwear for Women in 2026",
+    "target_keyword": "modern business casual workwear women 2026",
+    "search_volume": "850",
+    "intent": "informational",
+    "category": "guide"
+  },
+  {
+    "day": 1,
+    "slot": 2,
+    "title": "Top Workwear Trends 2026: Elevating Office Style with Sustainable Fabrics",
+    "target_keyword": "top workwear trends 2026 sustainable fabrics",
+    "search_volume": "420",
+    "intent": "informational",
+    "category": "trend"
+  },
+  {
+    "day": 1,
+    "slot": 3,
+    "title": "Best Affordable Work Pants for Women Under $75 That Look Professional",
+    "target_keyword": "best affordable work pants women under $75",
+    "search_volume": "680",
+    "intent": "informational",
+    "category": "shopping"
+  },
+  {
+    "day": 2,
+    "slot": 1,
+    "title": "How to Style Oversized T-Shirts for a Chic Casual Look in 2026",
+    "target_keyword": "how to style oversized t-shirts chic casual",
+    "search_volume": "920",
+    "intent": "informational",
+    "category": "guide"
+  },
+  {
+    "day": 2,
+    "slot": 2,
+    "title": "2026 Casual Fashion Forecast: Utility Wear vs. Soft Minimalism",
+    "target_keyword": "2026 casual fashion forecast utility wear",
+    "search_volume": "380",
+    "intent": "informational",
+    "category": "trend"
+  },
+  {
+    "day": 2,
+    "slot": 3,
+    "title": "Best Comfortable Sneakers for Everyday Casual Wear Under $100",
+    "target_keyword": "best comfortable sneakers everyday casual wear",
+    "search_volume": "750",
+    "intent": "informational",
+    "category": "shopping"
+  },
+  {
+    "day": 3,
+    "slot": 1,
+    "title": "What to Wear to a First Date in 2026: Outfit Ideas to Impress",
+    "target_keyword": "what to wear first date 2026",
+    "search_volume": "1100",
+    "intent": "informational",
+    "category": "guide"
+  },
+  {
+    "day": 3,
+    "slot": 2,
+    "title": "Romantic Date Night Outfits 2026: Key Silhouettes and Fabrics",
+    "target_keyword": "romantic date night outfits 2026",
+    "search_volume": "450",
+    "intent": "informational",
+    "category": "trend"
+  },
+  {
+    "day": 3,
+    "slot": 3,
+    "title": "Best Little Black Dresses Under $50 for a Perfect Date Night",
+    "target_keyword": "best little black dresses under $50 date night",
+    "search_volume": "620",
+    "intent": "informational",
+    "category": "shopping"
+  },
+  {
+    "day": 4,
+    "slot": 1,
+    "title": "Spring Fashion Essentials 2026: Your Complete Guide to Seasonal Dressing",
+    "target_keyword": "spring fashion essentials 2026 seasonal dressing",
+    "search_volume": "1200",
+    "intent": "informational",
+    "category": "guide"
+  },
+  {
+    "day": 4,
+    "slot": 2,
+    "title": "Spring/Summer 2026 Runway Trends: Bold Colors and Statement Prints",
+    "target_keyword": "spring summer 2026 runway trends bold colors",
+    "search_volume": "550",
+    "intent": "informational",
+    "category": "trend"
+  },
+  {
+    "day": 4,
+    "slot": 3,
+    "title": "Best Lightweight Spring Jackets for Women Under $80",
+    "target_keyword": "best lightweight spring jackets women under $80",
+    "search_volume": "700",
+    "intent": "informational",
+    "category": "shopping"
+  },
+  {
+    "day": 5,
+    "slot": 1,
+    "title": "How to Style Clothes for an Apple Body Shape in 2026: Flattering Outfits",
+    "target_keyword": "how to style apple body shape 2026",
+    "search_volume": "980",
+    "intent": "informational",
+    "category": "guide"
+  },
+  {
+    "day": 5,
+    "slot": 2,
+    "title": "Inclusive Fashion Trends 2026: Celebrating Every Body Type with Style",
+    "target_keyword": "inclusive fashion trends 2026 every body type",
+    "search_volume": "350",
+    "intent": "informational",
+    "category": "trend"
+  },
+  {
+    "day": 5,
+    "slot": 3,
+    "title": "Best Jeans for Petite Women Under $60 That Actually Fit",
+    "target_keyword": "best jeans petite women under $60",
+    "search_volume": "810",
+    "intent": "informational",
+    "category": "shopping"
+  },
+  {
+    "day": 6,
+    "slot": 1,
+    "title": "The Complete Guide to Building a Stylish Wardrobe on a Budget in 2026",
+    "target_keyword": "build stylish wardrobe on a budget 2026",
+    "search_volume": "1300",
+    "intent": "informational",
+    "category": "guide"
+  },
+  {
+    "day": 6,
+    "slot": 2,
+    "title": "Thrifting Trends 2026: How to Find Designer Pieces on a Budget",
+    "target_keyword": "thrifting trends 2026 designer pieces budget",
+    "search_volume": "480",
+    "intent": "informational",
+    "category": "trend"
+  },
+  {
+    "day": 6,
+    "slot": 3,
+    "title": "Best Fashion Finds on Amazon Under $30 That Look Expensive",
+    "target_keyword": "best fashion finds amazon under $30",
+    "search_volume": "900",
+    "intent": "informational",
+    "category": "shopping"
+  },
+  {
+    "day": 7,
+    "slot": 1,
+    "title": "What to Wear to a Summer Wedding as a Guest in 2026: Elegant Options",
+    "target_keyword": "what to wear summer wedding guest 2026",
+    "search_volume": "1400",
+    "intent": "informational",
+    "category": "guide"
+  },
+  {
+    "day": 7,
+    "slot": 2,
+    "title": "Wedding Guest Dress Trends 2026: Modern Silhouettes and Color Palettes",
+    "target_keyword": "wedding guest dress trends 2026",
+    "search_volume": "600",
+    "intent": "informational",
+    "category": "trend"
+  },
+  {
+    "day": 7,
+    "slot": 3,
+    "title": "Best Cocktail Dresses Under $150 for Formal Occasions",
+    "target_keyword": "best cocktail dresses under $150 formal",
+    "search_volume": "780",
+    "intent": "informational",
+    "category": "shopping"
+  },
+  {
+    "day": 8,
+    "slot": 1,
+    "title": "The Complete Guide to Investing in Luxury Handbags: Timeless Pieces 2026",
+    "target_keyword": "guide investing luxury handbags timeless pieces",
+    "search_volume": "1050",
+    "intent": "informational",
+    "category": "guide"
+  },
+  {
+    "day": 8,
+    "slot": 2,
+    "title": "Luxury Fashion Trends 2026: Quiet Luxury vs. Statement Opulence",
+    "target_keyword": "luxury fashion trends 2026 quiet luxury",
+    "search_volume": "500",
+    "intent": "informational",
+    "category": "trend"
+  },
+  {
+    "day": 8,
+    "slot": 3,
+    "title": "Best Entry-Level Designer Bags Under $500 for First-Time Buyers",
+    "target_keyword": "best entry-level designer bags under $500",
+    "search_volume": "880",
+    "intent": "informational",
+    "category": "shopping"
+  },
+  {
+    "day": 9,
+    "slot": 1,
+    "title": "How to Style Streetwear for Women in 2026: A Beginner's Guide",
+    "target_keyword": "how to style streetwear women 2026",
+    "search_volume": "950",
+    "intent": "informational",
+    "category": "guide"
+  },
+  {
+    "day": 9,
+    "slot": 2,
+    "title": "2026 Streetwear Trends: Blending Athleisure with High Fashion Elements",
+    "target_keyword": "2026 streetwear trends athleisure high fashion",
+    "search_volume": "400",
+    "intent": "informational",
+    "category": "trend"
+  },
+  {
+    "day": 9,
+    "slot": 3,
+    "title": "Best Graphic T-Shirts Under $40 for an Authentic Streetwear Look",
+    "target_keyword": "best graphic t-shirts under $40 streetwear",
+    "search_volume": "650",
+    "intent": "informational",
+    "category": "shopping"
+  },
+  {
+    "day": 10,
+    "slot": 1,
+    "title": "The Complete Guide to Building a Minimalist Capsule Wardrobe in 2026",
+    "target_keyword": "guide building minimalist capsule wardrobe 2026",
+    "search_volume": "1150",
+    "intent": "informational",
+    "category": "guide"
+  },
+  {
+    "day": 10,
+    "slot": 2,
+    "title": "Minimalist Fashion Trends 2026: Embracing Quiet Luxury and Timeless Pieces",
+    "target_keyword": "minimalist fashion trends 2026 quiet luxury",
+    "search_volume": "390",
+    "intent": "informational",
+    "category": "trend"
+  },
+  {
+    "day": 10,
+    "slot": 3,
+    "title": "Best Versatile Basics Under $50 for a Minimalist Wardrobe",
+    "target_keyword": "best versatile basics under $50 minimalist",
+    "search_volume": "720",
+    "intent": "informational",
+    "category": "shopping"
+  },
+  {
+    "day": 11,
+    "slot": 1,
+    "title": "How to Create a Work-from-Home Capsule Wardrobe in 2026 for Comfort",
+    "target_keyword": "create work-from-home capsule wardrobe 2026",
+    "search_volume": "1000",
+    "intent": "informational",
+    "category": "guide"
+  },
+  {
+    "day": 11,
+    "slot": 2,
+    "title": "Sustainable Capsule Wardrobe Trends 2026: Eco-Friendly Fashion Choices",
+    "target_keyword": "sustainable capsule wardrobe trends 2026",
+    "search_volume": "430",
+    "intent": "informational",
+    "category": "trend"
+  },
+  {
+    "day": 11,
+    "slot": 3,
+    "title": "Best Investment Pieces Under $200 for a Long-Lasting Capsule Wardrobe",
+    "target_keyword": "best investment pieces under $200 capsule",
+    "search_volume": "800",
+    "intent": "informational",
+    "category": "shopping"
+  },
+  {
+    "day": 12,
+    "slot": 1,
+    "title": "How to Style Statement Jewelry in 2026 for Every Occasion",
+    "target_keyword": "how to style statement jewelry 2026",
+    "search_volume": "900",
+    "intent": "informational",
+    "category": "guide"
+  },
+  {
+    "day": 12,
+    "slot": 2,
+    "title": "Top Handbag Trends 2026: Micro Bags vs. Oversized Totes",
+    "target_keyword": "top handbag trends 2026 micro oversized",
+    "search_volume": "520",
+    "intent": "informational",
+    "category": "trend"
+  },
+  {
+    "day": 12,
+    "slot": 3,
+    "title": "Best Everyday Gold Hoop Earrings Under $40 for Versatile Style",
+    "target_keyword": "best everyday gold hoop earrings under $40",
+    "search_volume": "760",
+    "intent": "informational",
+    "category": "shopping"
+  },
+  {
+    "day": 13,
+    "slot": 1,
+    "title": "The Complete Guide to Finding the Perfect Jeans for Your Body Type",
+    "target_keyword": "guide finding perfect jeans body type",
+    "search_volume": "1100",
+    "intent": "informational",
+    "category": "guide"
+  },
+  {
+    "day": 13,
+    "slot": 2,
+    "title": "Denim Trends 2026: Wide-Leg vs. Straight-Leg Jeans and More",
+    "target_keyword": "denim trends 2026 wide-leg straight-leg jeans",
+    "search_volume": "460",
+    "intent": "informational",
+    "category": "trend"
+  },
+  {
+    "day": 13,
+    "slot": 3,
+    "title": "Best Sustainable Denim Brands Under $100 for Eco-Conscious Shoppers",
+    "target_keyword": "best sustainable denim brands under $100",
+    "search_volume": "840",
+    "intent": "informational",
+    "category": "shopping"
+  },
+  {
+    "day": 14,
+    "slot": 1,
+    "title": "How to Style Athleisure Wear for Everyday in 2026: Beyond the Gym",
+    "target_keyword": "how to style athleisure wear everyday 2026",
+    "search_volume": "1000",
+    "intent": "informational",
+    "category": "guide"
+  },
+  {
+    "day": 14,
+    "slot": 2,
+    "title": "Athleisure Trends 2026: Blending Comfort with High Fashion Elements",
+    "target_keyword": "athleisure trends 2026 comfort high fashion",
+    "search_volume": "410",
+    "intent": "informational",
+    "category": "trend"
+  },
+  {
+    "day": 14,
+    "slot": 3,
+    "title": "Best Stylish Leggings Under $60 for Workouts and Casual Wear",
+    "target_keyword": "best stylish leggings under $60 workouts",
+    "search_volume": "790",
+    "intent": "informational",
+    "category": "shopping"
+  }
+]
