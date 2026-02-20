@@ -1,0 +1,4 @@
+tweepy
+google-generativeai
+requests
+jinja2
