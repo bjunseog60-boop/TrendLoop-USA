@@ -15,7 +15,40 @@ import re
 from datetime import datetime, timezone
 from urllib.parse import quote_plus
 from google import genai
-from config import GEMINI_API_KEY, AMAZON_TAG
+from config import GEMINI_API_KEY, AMAZON_TAG, API_TIMEOUT_SECONDS, GEMINI_DAILY_CALL_LIMIT
+
+
+# ── Gemini API 호출 횟수 추적 ──
+_gemini_call_count = 0
+
+
+def _check_gemini_limit() -> bool:
+    """Gemini API 일일 호출 한도를 초과했는지 확인합니다."""
+    global _gemini_call_count
+    if _gemini_call_count >= GEMINI_DAILY_CALL_LIMIT:
+        print(f"[작가] Gemini API 일일 한도 {GEMINI_DAILY_CALL_LIMIT}회 도달. 추가 호출을 차단합니다.")
+        return False
+    return True
+
+
+def _call_gemini(client, prompt: str) -> str:
+    """Gemini API를 호출하고 사용량을 기록합니다. 타임아웃 적용."""
+    global _gemini_call_count
+
+    if not _check_gemini_limit():
+        return ""
+
+    _gemini_call_count += 1
+    print(f"[작가] Gemini API 호출 {_gemini_call_count}/{GEMINI_DAILY_CALL_LIMIT}")
+
+    response = client.models.generate_content(
+        model="gemini-2.5-flash",
+        contents=prompt,
+        config={
+            "http_options": {"timeout": API_TIMEOUT_SECONDS * 1000},
+        },
+    )
+    return response.text
 
 
 def _make_amazon_link(keyword: str) -> str:
@@ -80,11 +113,9 @@ Write an engaging, SEO-optimized blog post about today's hottest fashion trends.
 Write the blog post now:"""
 
     try:
-        response = client.models.generate_content(
-            model="gemini-2.5-flash",
-            contents=prompt,
-        )
-        article_html = response.text
+        article_html = _call_gemini(client, prompt)
+        if not article_html:
+            return {}
     except Exception as e:
         print(f"[작가] Gemini API 오류: {e}")
         return {}
@@ -92,7 +123,7 @@ Write the blog post now:"""
     # ── 제목 추출 ──
     title_match = re.search(r"<h1[^>]*>(.*?)</h1>", article_html, re.IGNORECASE)
     title = title_match.group(1) if title_match else f"Fashion Trends: {keyword_names[0].title()}"
-    title = re.sub(r"<[^>]+>", "", title)  # HTML 태그 제거
+    title = re.sub(r"<[^>]+>", "", title)
 
     # ── URL 슬러그 생성 ──
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
@@ -109,12 +140,12 @@ Keywords: {', '.join(keyword_names)}
 Tweet:"""
 
     try:
-        summary_response = client.models.generate_content(
-            model="gemini-2.5-flash",
-            contents=summary_prompt,
-        )
-        summary = summary_response.text.strip()[:250]
+        summary = _call_gemini(client, summary_prompt)
+        summary = summary.strip()[:250] if summary else ""
     except Exception:
+        summary = ""
+
+    if not summary:
         summary = f"New fashion trends alert! {', '.join(keyword_names[:3])} #Fashion #Trending"
 
     # ── 완성된 HTML 페이지 만들기 ──
@@ -132,6 +163,7 @@ Tweet:"""
     print(f"  - 제목: {title}")
     print(f"  - 파일: {file_path}")
     print(f"  - 요약: {summary}")
+    print(f"  - Gemini API 총 호출: {_gemini_call_count}회")
 
     return {
         "title": title,
@@ -194,7 +226,6 @@ def _wrap_in_html_page(title: str, article_html: str, date: str) -> str:
 </html>"""
 
 
-# ── 테스트용 ──
 if __name__ == "__main__":
     test_keywords = [
         {"keyword": "coquette fashion", "count": 10},

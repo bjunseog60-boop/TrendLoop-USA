@@ -39,3 +39,19 @@ FASHION_SEED_QUERIES = [
     "trending fashion style",
 ]
 MAX_KEYWORDS = 5
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# 비용 안전장치 설정
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# API 호출 타임아웃 (초)
+API_TIMEOUT_SECONDS = 30
+
+# 전체 프로그램 최대 실행 시간 (초) - 5분
+MAX_TOTAL_RUNTIME_SECONDS = 300
+
+# Gemini API 하루 최대 호출 횟수
+GEMINI_DAILY_CALL_LIMIT = 5
+
+# 연속 에러 최대 허용 횟수 (이 횟수 초과 시 즉시 종료)
+MAX_CONSECUTIVE_ERRORS = 3
