@@ -1,0 +1,34 @@
+# ── 보안: API 키/시크릿 파일 절대 커밋 금지 ──
+.env
+.env.*
+*.env
+secrets.json
+credentials.json
+service-account*.json
+*_key.txt
+*_secret.txt
+
+# ── 세탁 도구 잔여 파일 ──
+replacements.txt
+filter-repo/
+
+# ── Python 캐시 ──
+__pycache__/
+*.pyc
+*.pyo
+.Python
+
+# ── OS 임시 파일 ──
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE ──
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── 백업 폴더 ──
+_deleted_items/
+_backups/

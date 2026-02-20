@@ -1,10 +1,8 @@
 """
 에이전트 C - 마케터 (Marketer)
-역할: 완성된 블로그 글을 트위터에 게시하고 구글 검색 색인을 요청합니다.
-
-작동 방식:
-  1. 블로그 글 요약 + 링크를 트위터에 게시
-  2. Google Indexing API로 새 글 URL을 색인 요청
+역할: 트위터 게시 + 구글 색인 + 멀티 채널 배포
+라이브러리: tweepy v4 (tweepy.Client.create_tweet), requests
+공식 문서: https://docs.tweepy.org/en/stable/client.html#create-tweet
 """
 
 import requests
@@ -15,36 +13,24 @@ from config import (
     X_ACCESS_TOKEN,
     X_ACCESS_TOKEN_SECRET,
     BLOG_BASE_URL,
+    get_distribution_channels,
 )
+from safety import tracker
 
 
 def post_to_twitter(summary: str, slug: str) -> bool:
-    """
-    트위터에 블로그 글 홍보 트윗을 게시합니다.
-
-    매개변수:
-        summary: 트윗 본문 (요약)
-        slug: 블로그 글 URL 슬러그
-
-    반환값:
-        성공 여부 (True/False)
-    """
+    """tweepy.Client.create_tweet() - 트윗 게시"""
     if not all([X_API_KEY, X_API_SECRET, X_ACCESS_TOKEN, X_ACCESS_TOKEN_SECRET]):
         print("[마케터] 경고: X API 인증 정보가 불완전합니다. 트윗 게시를 건너뜁니다.")
         return False
 
-    # ── 블로그 URL 만들기 ──
     blog_url = f"{BLOG_BASE_URL}/{slug}.html"
-
-    # ── 트윗 텍스트 구성 ──
     tweet_text = f"{summary}\n\nRead more: {blog_url}"
 
-    # 280자 제한 확인
     if len(tweet_text) > 280:
         max_summary_len = 280 - len(f"\n\nRead more: {blog_url}") - 3
         tweet_text = f"{summary[:max_summary_len]}...\n\nRead more: {blog_url}"
 
-    # ── 트위터 API v2 클라이언트 (쓰기용) ──
     client = tweepy.Client(
         consumer_key=X_API_KEY,
         consumer_secret=X_API_SECRET,
@@ -54,77 +40,117 @@ def post_to_twitter(summary: str, slug: str) -> bool:
 
     try:
         response = client.create_tweet(text=tweet_text)
+        tracker.log_api_call("twitter_write")
         tweet_id = response.data["id"]
         print(f"[마케터] 트윗 게시 성공!")
         print(f"  - 트윗 ID: {tweet_id}")
         print(f"  - URL: https://x.com/i/status/{tweet_id}")
         return True
     except tweepy.TweepyException as e:
+        tracker.log_error("twitter")
         print(f"[마케터] 트윗 게시 실패: {e}")
         return False
 
 
 def ping_google_indexing(slug: str) -> bool:
-    """
-    구글에 새 페이지 URL을 알려줍니다 (색인 요청).
-
-    방법 1: Google 'ping' 방식 (Sitemap ping - 간단)
-    방법 2: IndexNow API (Bing/Yandex/기타 검색엔진도 지원)
-
-    매개변수:
-        slug: 블로그 글 URL 슬러그
-
-    반환값:
-        성공 여부 (True/False)
-    """
+    """구글/Bing에 새 페이지 색인 요청"""
     page_url = f"{BLOG_BASE_URL}/{slug}.html"
     sitemap_url = f"{BLOG_BASE_URL}/sitemap.xml"
     success = False
 
-    # ── 방법 1: Google Sitemap Ping ──
+    # Google Sitemap Ping
     try:
-        google_ping = f"https://www.google.com/ping?sitemap={sitemap_url}"
-        resp = requests.get(google_ping, timeout=15)
+        resp = requests.get(f"https://www.google.com/ping?sitemap={sitemap_url}", timeout=15)
+        tracker.log_api_call("google_index")
         if resp.status_code == 200:
-            print(f"[마케터] Google sitemap ping 성공!")
+            print("[마케터] Google sitemap ping 성공!")
             success = True
         else:
             print(f"[마케터] Google ping 응답 코드: {resp.status_code}")
     except requests.RequestException as e:
+        tracker.log_error("other")
         print(f"[마케터] Google ping 실패: {e}")
 
-    # ── 방법 2: IndexNow (Bing, Yandex 등) ──
+    # IndexNow (Bing, Yandex)
     try:
         indexnow_payload = {
             "host": BLOG_BASE_URL.replace("https://", "").replace("http://", ""),
             "urlList": [page_url],
         }
-        resp = requests.post(
-            "https://api.indexnow.org/indexnow",
-            json=indexnow_payload,
-            timeout=15,
-        )
+        resp = requests.post("https://api.indexnow.org/indexnow", json=indexnow_payload, timeout=15)
+        tracker.log_api_call("indexnow")
         if resp.status_code in (200, 202):
-            print(f"[마케터] IndexNow 색인 요청 성공!")
+            print("[마케터] IndexNow 색인 요청 성공!")
             success = True
         else:
             print(f"[마케터] IndexNow 응답 코드: {resp.status_code}")
     except requests.RequestException as e:
+        tracker.log_error("other")
         print(f"[마케터] IndexNow 요청 실패: {e}")
 
     if success:
         print(f"  - 색인 요청 URL: {page_url}")
     else:
-        print(f"[마케터] 색인 요청이 모두 실패했지만, 글은 정상적으로 발행되었습니다.")
+        print("[마케터] 색인 요청이 모두 실패했지만, 글은 정상적으로 발행되었습니다.")
 
     return success
 
 
+def distribute_to_channels(title: str, summary: str, slug: str) -> int:
+    """
+    멀티 채널 배포 엔진
+    환경 변수 DISTRIBUTION_CHANNELS에 등록된 채널들로 콘텐츠를 배포합니다.
+
+    채널 JSON 형식:
+    [
+        {"name": "site_a", "api_key": "...", "endpoint": "https://..."},
+        {"name": "site_b", "api_key": "...", "endpoint": "https://..."}
+    ]
+    """
+    channels = get_distribution_channels()
+    if not channels:
+        print("[마케터] 멀티 채널 배포 대상이 없습니다. (DISTRIBUTION_CHANNELS 미설정)")
+        return 0
+
+    blog_url = f"{BLOG_BASE_URL}/{slug}.html"
+    success_count = 0
+
+    for ch in channels:
+        name = ch.get("name", "unknown")
+        api_key = ch.get("api_key", "")
+        endpoint = ch.get("endpoint", "")
+
+        if not endpoint or not api_key:
+            print(f"[마케터] 채널 '{name}' 설정 불완전. 건너뜁니다.")
+            continue
+
+        try:
+            payload = {
+                "title": title,
+                "summary": summary,
+                "url": blog_url,
+            }
+            headers = {
+                "Authorization": f"Bearer {api_key}",
+                "Content-Type": "application/json",
+            }
+            resp = requests.post(endpoint, json=payload, headers=headers, timeout=15)
+            tracker.log_api_call("twitter_write")
+
+            if resp.status_code in (200, 201, 202):
+                print(f"[마케터] 채널 '{name}' 배포 성공!")
+                success_count += 1
+            else:
+                print(f"[마케터] 채널 '{name}' 응답 코드: {resp.status_code}")
+        except requests.RequestException as e:
+            tracker.log_error("other")
+            print(f"[마케터] 채널 '{name}' 배포 실패: {e}")
+
+    print(f"[마케터] 멀티 채널 배포 결과: {success_count}/{len(channels)} 성공")
+    return success_count
+
+
 def update_sitemap(all_slugs: list[str]) -> None:
-    """
-    docs/sitemap.xml 파일을 업데이트합니다.
-    GitHub Pages에서 검색엔진이 이 파일을 참고합니다.
-    """
     import os
     from datetime import datetime, timezone
 
@@ -151,7 +177,6 @@ def update_sitemap(all_slugs: list[str]) -> None:
     print(f"[마케터] sitemap.xml 업데이트 완료 ({len(all_slugs)}개 URL)")
 
 
-# ── 테스트용 ──
 if __name__ == "__main__":
     test_slug = "2026-02-20-test-fashion-trends"
     post_to_twitter("Testing TrendLoop USA! #Fashion #Test", test_slug)

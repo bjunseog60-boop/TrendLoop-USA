@@ -1,11 +1,8 @@
 """
 에이전트 A - 분석가 (Analyst)
 역할: X(트위터)에서 미국 패션 트렌드 키워드를 검색하고 추출합니다.
-
-작동 방식:
-  1. X API v2로 패션 관련 영어 트윗을 검색
-  2. 자주 등장하는 단어/해시태그를 세어서 인기 키워드 추출
-  3. 상위 키워드 리스트를 반환
+라이브러리: tweepy v4 (tweepy.Client - X API v2)
+공식 문서: https://docs.tweepy.org/en/stable/client.html#search-tweets
 """
 
 import re
@@ -17,9 +14,9 @@ from config import (
     MAX_KEYWORDS,
     MAX_CONSECUTIVE_ERRORS,
 )
+from safety import tracker
 
 
-# ── 무시할 일반적인 단어들 (불용어) ──
 STOP_WORDS = {
     "the", "a", "an", "is", "are", "was", "were", "be", "been", "being",
     "have", "has", "had", "do", "does", "did", "will", "would", "could",
@@ -41,34 +38,31 @@ STOP_WORDS = {
 
 
 def fetch_trending_keywords() -> list[dict]:
-    """
-    X API에서 패션 관련 트윗을 검색하고,
-    인기 키워드를 추출해서 리스트로 반환합니다.
-    """
+    """X API v2로 패션 트렌드 키워드를 추출합니다."""
     if not X_BEARER_TOKEN:
         print("[분석가] 경고: X_BEARER_TOKEN이 설정되지 않았습니다.")
         return _fallback_keywords()
 
-    # ── X API v2 클라이언트 생성 ──
+    # tweepy.Client() - X API v2 Bearer Token 인증
     client = tweepy.Client(bearer_token=X_BEARER_TOKEN)
 
     all_texts: list[str] = []
     all_hashtags: list[str] = []
-    consecutive_errors = 0  # 연속 에러 카운터
 
     for query in FASHION_SEED_QUERIES:
-        # ── 비정상 동작 감지: 연속 에러 초과 시 중단 ──
-        if consecutive_errors >= MAX_CONSECUTIVE_ERRORS:
-            print(f"[분석가] 연속 {consecutive_errors}회 에러 발생. 안전을 위해 검색을 중단합니다.")
+        if tracker.is_abnormal(MAX_CONSECUTIVE_ERRORS):
+            print(f"[분석가] 비정상 동작 감지. 검색을 중단합니다.")
             break
 
         try:
             search_query = f"{query} lang:en -is:retweet"
+            # client.search_recent_tweets() - 최근 7일 트윗 검색
             response = client.search_recent_tweets(
                 query=search_query,
                 max_results=20,
                 tweet_fields=["text", "entities"],
             )
+            tracker.log_api_call("twitter_read")
 
             if response.data:
                 for tweet in response.data:
@@ -77,21 +71,19 @@ def fetch_trending_keywords() -> list[dict]:
                         for tag in tweet.entities["hashtags"]:
                             all_hashtags.append(tag["tag"].lower())
 
-            consecutive_errors = 0  # 성공하면 카운터 리셋
-
         except tweepy.TooManyRequests:
-            print("[분석가] API 호출 제한 도달. 현재까지 수집된 데이터로 진행합니다.")
+            print("[분석가] API 호출 제한 도달. 수집된 데이터로 진행합니다.")
+            tracker.log_error("twitter")
             break
         except tweepy.TweepyException as e:
-            consecutive_errors += 1
-            print(f"[분석가] 검색 오류 ({query}): {e} [연속 에러 {consecutive_errors}회]")
+            tracker.log_error("twitter")
+            print(f"[분석가] 검색 오류 ({query}): {e}")
             continue
 
     if not all_texts and not all_hashtags:
         print("[분석가] 트윗을 가져오지 못했습니다. 기본 키워드를 사용합니다.")
         return _fallback_keywords()
 
-    # ── 키워드 빈도 분석 ──
     word_counter = Counter()
 
     for tag in all_hashtags:
@@ -115,7 +107,6 @@ def fetch_trending_keywords() -> list[dict]:
 
 
 def _fallback_keywords() -> list[dict]:
-    """API를 사용할 수 없을 때 쓰는 기본 키워드 목록"""
     fallback = [
         {"keyword": "coquette fashion", "count": 0},
         {"keyword": "quiet luxury", "count": 0},
