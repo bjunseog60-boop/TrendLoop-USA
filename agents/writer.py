@@ -14,7 +14,7 @@ import os
 import re
 from datetime import datetime, timezone
 from urllib.parse import quote_plus
-import google.generativeai as genai
+from google import genai
 from config import GEMINI_API_KEY, AMAZON_TAG
 
 
@@ -52,9 +52,8 @@ def generate_blog_post(keywords: list[dict]) -> dict:
         f"- {kw}: {url}" for kw, url in amazon_links.items()
     )
 
-    # ── Gemini API 설정 ──
-    genai.configure(api_key=GEMINI_API_KEY)
-    model = genai.GenerativeModel("gemini-2.0-flash")
+    # ── Gemini API 설정 (새 google-genai 패키지) ──
+    client = genai.Client(api_key=GEMINI_API_KEY)
 
     # ── 블로그 글 생성 프롬프트 ──
     prompt = f"""You are a professional fashion blogger writing for a US audience.
@@ -81,7 +80,10 @@ Write an engaging, SEO-optimized blog post about today's hottest fashion trends.
 Write the blog post now:"""
 
     try:
-        response = model.generate_content(prompt)
+        response = client.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=prompt,
+        )
         article_html = response.text
     except Exception as e:
         print(f"[작가] Gemini API 오류: {e}")
@@ -107,7 +109,10 @@ Keywords: {', '.join(keyword_names)}
 Tweet:"""
 
     try:
-        summary_response = model.generate_content(summary_prompt)
+        summary_response = client.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=summary_prompt,
+        )
         summary = summary_response.text.strip()[:250]
     except Exception:
         summary = f"New fashion trends alert! {', '.join(keyword_names[:3])} #Fashion #Trending"
