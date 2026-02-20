@@ -15,7 +15,7 @@ import re
 from datetime import datetime, timezone
 from urllib.parse import quote_plus
 from google import genai
-from config import GEMINI_API_KEY, AMAZON_TAG, API_TIMEOUT_SECONDS, GEMINI_DAILY_CALL_LIMIT
+from config import GEMINI_API_KEY, AMAZON_TAG, GEMINI_DAILY_CALL_LIMIT
 
 
 # ── Gemini API 호출 횟수 추적 ──
@@ -44,9 +44,6 @@ def _call_gemini(client, prompt: str) -> str:
     response = client.models.generate_content(
         model="gemini-2.5-flash",
         contents=prompt,
-        config={
-            "http_options": {"timeout": API_TIMEOUT_SECONDS * 1000},
-        },
     )
     return response.text
 
