@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - TrendLoop USA</title>
+    <meta name="description" content="Learn about TrendLoop USA, our mission, editorial values, and the team behind your daily source for fashion trends, style guides, and curated product picks.">
+    <meta name="author" content="TrendLoop USA Team">
+    <link rel="canonical" href="https://trendloopusa.net/about.html">
+    <meta property="og:title" content="About Us - TrendLoop USA">
+    <meta property="og:description" content="Learn about TrendLoop USA, our mission, editorial values, and the team behind your daily source for fashion trends and style guides.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://trendloopusa.net/about.html">
+    <meta property="og:site_name" content="TrendLoop USA">
+    <meta name="twitter:card" content="summary">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8049649445649586" crossorigin="anonymous"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, sans-serif; line-height: 1.6; color: #1a1a1a; background: #fafaf9; }
+
+        /* Navigation */
+        .nav { background: #fff; border-bottom: 1px solid #e5e5e5; position: sticky; top: 0; z-index: 100; }
+        .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+        .nav-brand { font-family: 'Playfair Display', serif; font-size: 1.4em; font-weight: 700; color: #1a1a1a; text-decoration: none; }
+        .nav-brand span { color: #c9a96e; }
+        .nav-links { display: flex; gap: 24px; list-style: none; }
+        .nav-links a { color: #666; text-decoration: none; font-size: 0.9em; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: #c9a96e; }
+        .nav-links a.active { color: #c9a96e; }
+        .nav-toggle { display: none; background: none; border: none; font-size: 1.5em; cursor: pointer; color: #1a1a1a; }
+
+        /* Hero */
+        .hero { background: linear-gradient(135deg, #1a1a1a 0%, #2d2520 100%); color: #fff; padding: 64px 24px; text-align: center; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 2.4em; margin-bottom: 12px; }
+        .hero p { color: #ccc; font-size: 1.1em; max-width: 600px; margin: 0 auto; }
+
+        /* Main Content */
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 24px 60px; }
+        .section-title { font-family: 'Playfair Display', serif; font-size: 1.6em; margin-bottom: 16px; color: #1a1a1a; }
+        .content-section { margin-bottom: 40px; }
+        .content-section p { color: #444; font-size: 0.95em; line-height: 1.8; margin-bottom: 16px; }
+        .content-section ul { color: #444; font-size: 0.95em; line-height: 1.8; margin-left: 24px; margin-bottom: 16px; }
+        .content-section li { margin-bottom: 8px; }
+        .highlight-box { background: #f7f5f0; border-left: 4px solid #c9a96e; border-radius: 8px; padding: 20px 24px; margin: 24px 0; }
+        .highlight-box p { color: #555; margin-bottom: 0; }
+
+        /* Ad slot */
+        .ad-slot { background: #f5f3ee; border: 1px dashed #ddd; border-radius: 12px; padding: 24px; text-align: center; margin: 32px 0; color: #aaa; font-size: 0.85em; min-height: 90px; display: flex; align-items: center; justify-content: center; }
+
+        /* Footer */
+        .footer { background: #1a1a1a; color: #999; padding: 48px 24px; }
+        .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
+        .footer h4 { color: #fff; font-size: 0.9em; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+        .footer p { font-size: 0.85em; line-height: 1.8; }
+        .footer a { color: #c9a96e; text-decoration: none; }
+        .footer a:hover { color: #dfc490; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 8px; }
+        .footer-links a { color: #999; font-size: 0.85em; }
+        .footer-links a:hover { color: #c9a96e; }
+        .footer-bottom { max-width: 1100px; margin: 0 auto; padding-top: 24px; margin-top: 24px; border-top: 1px solid #333; text-align: center; font-size: 0.8em; }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8em; }
+            .footer-inner { grid-template-columns: 1fr; gap: 24px; }
+            .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; background: #fff; flex-direction: column; padding: 16px 24px; border-bottom: 1px solid #e5e5e5; }
+            .nav-links.open { display: flex; }
+            .nav-toggle { display: block; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-brand">TrendLoop <span>USA</span></a>
+            <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about.html" class="active">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/disclaimer.html">Disclaimer</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>About TrendLoop USA</h1>
+        <p>Your trusted source for fashion trends, style guides, and curated product recommendations.</p>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <div class="content-section">
+            <h2 class="section-title">Who We Are</h2>
+            <p>TrendLoop USA is a fashion and style publication dedicated to helping you navigate the ever-changing world of fashion with confidence and clarity. We believe that great style should be accessible to everyone, regardless of budget, body type, or personal aesthetic. Our team of writers and fashion enthusiasts works daily to bring you thoughtful, well-researched content that makes getting dressed feel less like a chore and more like an opportunity for self-expression.</p>
+            <p>Founded with the belief that fashion media should be practical as well as inspirational, TrendLoop USA bridges the gap between high-end runway trends and everyday wearability. We translate the latest looks from Fashion Week into actionable advice you can apply to your own closet, and we scour the market to find the best products at every price point so you can shop smarter.</p>
+        </div>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8049649445649586" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">Our Mission</h2>
+            <p>Our mission is simple: to be the most helpful fashion resource on the internet. We aim to cut through the noise of trend cycles and marketing hype to give you honest, expert-backed guidance on what to wear, how to wear it, and where to find it at the best value. Every article we publish is designed to answer real questions from real people who want to look and feel their best.</p>
+            <div class="highlight-box">
+                <p>We are committed to editorial integrity. Our product recommendations are based on genuine research, and we always disclose when we use affiliate links. Your trust is more important to us than any commission.</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">What We Cover</h2>
+            <p>TrendLoop USA covers a wide range of fashion and style topics to serve readers at every stage of their style journey. Our content categories include:</p>
+            <ul>
+                <li><strong>Trend Analysis:</strong> In-depth breakdowns of the latest fashion trends from runways, street style, and social media. We explain what is trending, why it matters, and how to incorporate it into your wardrobe in a way that feels authentic to you.</li>
+                <li><strong>Style Guides:</strong> Practical, step-by-step guides on everything from building a capsule wardrobe to dressing for specific occasions like job interviews, weddings, date nights, and travel. Our guides are written with clarity and include specific product recommendations.</li>
+                <li><strong>Product Reviews and Picks:</strong> Curated selections of clothing, shoes, accessories, and beauty products across all budgets. We focus on quality, value, and versatility, highlighting items that earn their place in your closet for the long term.</li>
+                <li><strong>Seasonal Fashion:</strong> Timely content aligned with seasonal transitions, helping you update your wardrobe for spring, summer, fall, and winter without breaking the bank. We cover layering strategies, fabric choices, and seasonal color palettes.</li>
+                <li><strong>Budget-Friendly Fashion:</strong> Dedicated coverage of affordable fashion finds, dupes for designer pieces, and strategies for looking polished on a budget. We believe style and savings can coexist.</li>
+                <li><strong>Sustainable Style:</strong> Coverage of eco-conscious brands, sustainable fabrics, secondhand shopping tips, and ways to reduce fashion waste while still looking great.</li>
+                <li><strong>Body-Inclusive Fashion:</strong> Content designed to serve readers of all body types, with specific advice on fit, proportion, and brands that offer inclusive sizing.</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">Our Editorial Standards</h2>
+            <p>Quality and accuracy are the foundation of everything we publish. Our editorial process includes the following standards:</p>
+            <ul>
+                <li><strong>Research-driven content:</strong> Every article is backed by thorough research, including trend data analysis, product comparisons, and expert insights. We do not publish content based solely on opinion or sponsored talking points.</li>
+                <li><strong>Honest recommendations:</strong> When we recommend a product, it is because we genuinely believe it offers value to our readers. We clearly label all affiliate links and sponsored content so you always know where our recommendations come from.</li>
+                <li><strong>Regular updates:</strong> Fashion moves fast, and so do we. We review and update our content regularly to ensure that product links are current, prices are accurate, and trend information reflects the latest developments.</li>
+                <li><strong>Inclusive perspective:</strong> We write for a diverse audience. Our content is crafted to be welcoming to readers of all genders, ages, body types, and backgrounds. Fashion is for everyone, and our content reflects that belief.</li>
+            </ul>
+        </div>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8049649445649586" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">How We Make Money</h2>
+            <p>TrendLoop USA is a free resource supported by advertising and affiliate partnerships. When you click on certain links in our articles and make a purchase, we may earn a small commission at no additional cost to you. This revenue helps us keep the site running and continue producing high-quality content.</p>
+            <p>Our primary revenue sources include:</p>
+            <ul>
+                <li><strong>Amazon Associates Program:</strong> As an Amazon Associate, TrendLoop USA earns from qualifying purchases made through our product links.</li>
+                <li><strong>Display Advertising:</strong> We display ads through Google AdSense and similar networks. These ads are served based on your browsing interests and help fund our operations.</li>
+                <li><strong>Affiliate Partnerships:</strong> We partner with select retailers and brands through affiliate networks. These partnerships never influence our editorial judgment -- we only recommend products we believe in.</li>
+            </ul>
+            <p>For complete details on our affiliate relationships and FTC compliance, please visit our <a href="/disclaimer.html" style="color: #c9a96e;">Disclaimer and Affiliate Disclosure</a> page.</p>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">Get in Touch</h2>
+            <p>We love hearing from our readers. Whether you have a style question, a content suggestion, a business inquiry, or just want to say hello, we are always happy to connect. You can reach us at <a href="mailto:contact@trendloopusa.net" style="color: #c9a96e;">contact@trendloopusa.net</a> or visit our <a href="/contact.html" style="color: #c9a96e;">Contact page</a> for more information.</p>
+            <p>Thank you for being part of the TrendLoop USA community. We are here to help you look great, feel confident, and make smarter fashion choices every day.</p>
+        </div>
+
+        <p style="color: #aaa; font-size: 0.82em; margin-top: 40px;">Last updated: February 21, 2026</p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <h4>TrendLoop USA</h4>
+                <p>Expert fashion advice, trend analysis, and curated product picks. We help you make smart style decisions without the guesswork.</p>
+                <p style="margin-top: 12px;">Contact: <a href="mailto:contact@trendloopusa.net">contact@trendloopusa.net</a></p>
+            </div>
+            <div>
+                <h4>Pages</h4>
+                <ul class="footer-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/feed.xml">RSS Feed</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="/privacy.html">Privacy Policy</a></li>
+                    <li><a href="/disclaimer.html">Disclaimer & FTC</a></li>
+                    <li><a href="/terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 TrendLoop USA. All rights reserved. | <a href="/disclaimer.html">Affiliate Disclosure</a></p>
+        </div>
+    </footer>
+</body>
+</html>

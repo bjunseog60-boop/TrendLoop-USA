@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - TrendLoop USA</title>
+    <meta name="description" content="Get in touch with the TrendLoop USA team. Reach out for questions, feedback, business inquiries, or partnership opportunities.">
+    <meta name="author" content="TrendLoop USA Team">
+    <link rel="canonical" href="https://trendloopusa.net/contact.html">
+    <meta property="og:title" content="Contact Us - TrendLoop USA">
+    <meta property="og:description" content="Get in touch with the TrendLoop USA team for questions, feedback, or business inquiries.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://trendloopusa.net/contact.html">
+    <meta property="og:site_name" content="TrendLoop USA">
+    <meta name="twitter:card" content="summary">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8049649445649586" crossorigin="anonymous"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, sans-serif; line-height: 1.6; color: #1a1a1a; background: #fafaf9; }
+
+        /* Navigation */
+        .nav { background: #fff; border-bottom: 1px solid #e5e5e5; position: sticky; top: 0; z-index: 100; }
+        .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+        .nav-brand { font-family: 'Playfair Display', serif; font-size: 1.4em; font-weight: 700; color: #1a1a1a; text-decoration: none; }
+        .nav-brand span { color: #c9a96e; }
+        .nav-links { display: flex; gap: 24px; list-style: none; }
+        .nav-links a { color: #666; text-decoration: none; font-size: 0.9em; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: #c9a96e; }
+        .nav-links a.active { color: #c9a96e; }
+        .nav-toggle { display: none; background: none; border: none; font-size: 1.5em; cursor: pointer; color: #1a1a1a; }
+
+        /* Hero */
+        .hero { background: linear-gradient(135deg, #1a1a1a 0%, #2d2520 100%); color: #fff; padding: 64px 24px; text-align: center; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 2.4em; margin-bottom: 12px; }
+        .hero p { color: #ccc; font-size: 1.1em; max-width: 600px; margin: 0 auto; }
+
+        /* Main Content */
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 24px 60px; }
+        .section-title { font-family: 'Playfair Display', serif; font-size: 1.6em; margin-bottom: 16px; color: #1a1a1a; }
+        .content-section { margin-bottom: 40px; }
+        .content-section p { color: #444; font-size: 0.95em; line-height: 1.8; margin-bottom: 16px; }
+
+        /* Contact Cards */
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; margin: 32px 0; }
+        .contact-card { background: #fff; border-radius: 16px; padding: 32px 28px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); border: 1px solid #f0ede8; }
+        .contact-card h3 { font-family: 'Playfair Display', serif; font-size: 1.15em; margin-bottom: 12px; color: #1a1a1a; }
+        .contact-card p { color: #666; font-size: 0.9em; line-height: 1.7; margin-bottom: 12px; }
+        .contact-card a { color: #c9a96e; text-decoration: none; font-weight: 500; }
+        .contact-card a:hover { color: #b08a4a; }
+
+        /* Email highlight */
+        .email-highlight { background: linear-gradient(135deg, #1a1a1a 0%, #2d2520 100%); border-radius: 16px; padding: 40px 32px; text-align: center; margin: 32px 0; }
+        .email-highlight h3 { font-family: 'Playfair Display', serif; color: #fff; font-size: 1.3em; margin-bottom: 12px; }
+        .email-highlight p { color: #ccc; font-size: 0.95em; margin-bottom: 20px; }
+        .email-highlight a { display: inline-block; background: #c9a96e; color: #fff; padding: 12px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1em; transition: background 0.2s; }
+        .email-highlight a:hover { background: #b08a4a; }
+
+        .highlight-box { background: #f7f5f0; border-left: 4px solid #c9a96e; border-radius: 8px; padding: 20px 24px; margin: 24px 0; }
+        .highlight-box p { color: #555; margin-bottom: 0; }
+
+        /* FAQ */
+        .faq-item { margin-bottom: 24px; }
+        .faq-item h3 { font-size: 1em; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+        .faq-item p { color: #666; font-size: 0.9em; line-height: 1.7; }
+
+        /* Ad slot */
+        .ad-slot { background: #f5f3ee; border: 1px dashed #ddd; border-radius: 12px; padding: 24px; text-align: center; margin: 32px 0; color: #aaa; font-size: 0.85em; min-height: 90px; display: flex; align-items: center; justify-content: center; }
+
+        /* Footer */
+        .footer { background: #1a1a1a; color: #999; padding: 48px 24px; }
+        .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
+        .footer h4 { color: #fff; font-size: 0.9em; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+        .footer p { font-size: 0.85em; line-height: 1.8; }
+        .footer a { color: #c9a96e; text-decoration: none; }
+        .footer a:hover { color: #dfc490; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 8px; }
+        .footer-links a { color: #999; font-size: 0.85em; }
+        .footer-links a:hover { color: #c9a96e; }
+        .footer-bottom { max-width: 1100px; margin: 0 auto; padding-top: 24px; margin-top: 24px; border-top: 1px solid #333; text-align: center; font-size: 0.8em; }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8em; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .footer-inner { grid-template-columns: 1fr; gap: 24px; }
+            .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; background: #fff; flex-direction: column; padding: 16px 24px; border-bottom: 1px solid #e5e5e5; }
+            .nav-links.open { display: flex; }
+            .nav-toggle { display: block; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-brand">TrendLoop <span>USA</span></a>
+            <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html" class="active">Contact</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/disclaimer.html">Disclaimer</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Contact Us</h1>
+        <p>We would love to hear from you. Reach out with questions, feedback, or partnership opportunities.</p>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <div class="content-section">
+            <h2 class="section-title">Get in Touch</h2>
+            <p>Whether you are a reader with a style question, a brand looking to collaborate, or a fellow fashion enthusiast who wants to connect, we welcome your message. The TrendLoop USA team reads every email and strives to respond within one to two business days.</p>
+        </div>
+
+        <!-- Email Highlight -->
+        <div class="email-highlight">
+            <h3>Send Us an Email</h3>
+            <p>The best way to reach the TrendLoop USA team is via email.</p>
+            <a href="mailto:contact@trendloopusa.net">contact@trendloopusa.net</a>
+        </div>
+
+        <!-- Contact Cards -->
+        <div class="contact-grid">
+            <div class="contact-card">
+                <h3>General Inquiries</h3>
+                <p>Have a question about our content, need style advice, or just want to share your thoughts? We appreciate hearing from our readers and are happy to help with fashion-related questions whenever we can.</p>
+                <a href="mailto:contact@trendloopusa.net">contact@trendloopusa.net</a>
+            </div>
+            <div class="contact-card">
+                <h3>Business & Partnerships</h3>
+                <p>Interested in working with TrendLoop USA? We are open to collaborations with brands, PR agencies, and fellow content creators in the fashion and lifestyle space. Please include relevant details about your proposal in your email.</p>
+                <a href="mailto:contact@trendloopusa.net">contact@trendloopusa.net</a>
+            </div>
+            <div class="contact-card">
+                <h3>Advertising</h3>
+                <p>For advertising opportunities, sponsored content inquiries, or media kit requests, please reach out via email. Include your brand name, campaign details, and timeline so we can evaluate the fit with our audience.</p>
+                <a href="mailto:contact@trendloopusa.net">contact@trendloopusa.net</a>
+            </div>
+            <div class="contact-card">
+                <h3>Content Corrections</h3>
+                <p>We take accuracy seriously. If you notice an error in any of our articles, outdated product information, or a broken link, please let us know and we will address it promptly.</p>
+                <a href="mailto:contact@trendloopusa.net">contact@trendloopusa.net</a>
+            </div>
+        </div>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8049649445649586" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <h3>How quickly will I receive a response?</h3>
+                <p>We aim to respond to all emails within one to two business days. During busy periods, it may take slightly longer, but we read every message and do our best to reply as soon as possible.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can I submit a guest post or contribute an article?</h3>
+                <p>We occasionally accept guest contributions from experienced fashion writers and industry professionals. If you are interested in contributing, please send a brief pitch along with links to your previous work to our email address. We will review your proposal and get back to you if it aligns with our editorial standards and content calendar.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Do you accept product samples for review?</h3>
+                <p>We do accept product samples on a case-by-case basis. Please note that receiving a sample does not guarantee a review or a positive mention. All editorial decisions are made independently, and we will always disclose when a product was provided to us free of charge. Send your proposal to our contact email with details about the product and your brand.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How can I report a problem with the website?</h3>
+                <p>If you encounter any technical issues with our website, such as broken pages, display errors, or accessibility concerns, please email us with a description of the problem, the page URL, and the device and browser you are using. This information helps us resolve issues faster.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>I have a privacy or data concern. Who should I contact?</h3>
+                <p>For any questions related to your personal data, cookies, or our privacy practices, please email us at <a href="mailto:contact@trendloopusa.net" style="color: #c9a96e;">contact@trendloopusa.net</a>. You can also review our <a href="/privacy.html" style="color: #c9a96e;">Privacy Policy</a> for detailed information about how we handle user data.</p>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <p>Please note that TrendLoop USA is a digital publication. We do not have a physical office open to visitors. All communication is handled via email.</p>
+        </div>
+
+        <div class="content-section" style="margin-top: 32px;">
+            <h2 class="section-title">Connect With Us</h2>
+            <p>Stay up to date with our latest articles, trend reports, and style tips by subscribing to our <a href="/feed.xml" style="color: #c9a96e;">RSS feed</a>. You can also bookmark our homepage and check back daily for fresh content on fashion trends, product reviews, and style guides.</p>
+            <p>We value every member of our community and look forward to hearing from you. Thank you for choosing TrendLoop USA as your go-to fashion resource.</p>
+        </div>
+
+        <!-- Ad Slot Bottom -->
+        <div class="ad-slot">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8049649445649586" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <p style="color: #aaa; font-size: 0.82em; margin-top: 40px;">Last updated: February 21, 2026</p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <h4>TrendLoop USA</h4>
+                <p>Expert fashion advice, trend analysis, and curated product picks. We help you make smart style decisions without the guesswork.</p>
+                <p style="margin-top: 12px;">Contact: <a href="mailto:contact@trendloopusa.net">contact@trendloopusa.net</a></p>
+            </div>
+            <div>
+                <h4>Pages</h4>
+                <ul class="footer-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/feed.xml">RSS Feed</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="/privacy.html">Privacy Policy</a></li>
+                    <li><a href="/disclaimer.html">Disclaimer & FTC</a></li>
+                    <li><a href="/terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 TrendLoop USA. All rights reserved. | <a href="/disclaimer.html">Affiliate Disclosure</a></p>
+        </div>
+    </footer>
+</body>
+</html>

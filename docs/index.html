@@ -3,100 +3,262 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TrendLoop USA - Fashion Trends Blog</title>
-    <meta name="description" content="Your daily source for curated US fashion trends, powered by AI intelligence.">
+    <title>TrendLoop USA - Fashion Trends & Style Guides</title>
+    <meta name="description" content="Expert fashion advice, trend analysis, and curated product picks. Your daily source for style inspiration and smart shopping.">
     <meta name="author" content="TrendLoop USA Team">
     <link rel="canonical" href="https://trendloopusa.net/">
     <link rel="alternate" type="application/rss+xml" title="TrendLoop USA" href="https://trendloopusa.net/feed.xml">
-    <meta property="og:title" content="TrendLoop USA - Fashion Trends Blog">
-    <meta property="og:description" content="Your daily source for curated US fashion trends, powered by AI intelligence.">
+    <meta property="og:title" content="TrendLoop USA - Fashion Trends & Style Guides">
+    <meta property="og:description" content="Expert fashion advice, trend analysis, and curated product picks.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://trendloopusa.net/">
     <meta property="og:site_name" content="TrendLoop USA">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <script type="application/ld+json">
-    {{ "@context": "https://schema.org", "@type": "WebSite", "name": "TrendLoop USA", "url": "https://trendloopusa.net", "description": "Curated fashion intelligence, delivered daily" }}
+    { "@context": "https://schema.org", "@type": "WebSite", "name": "TrendLoop USA", "url": "https://trendloopusa.net", "description": "Expert fashion advice and curated product picks" }
     </script>
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag('js',new Date());gtag('config','GA_MEASUREMENT_ID');</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8049649445649586" crossorigin="anonymous"></script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Georgia, 'Times New Roman', serif; line-height: 1.6; color: #2a2a2a; background: #fdfbf9; }
-        .site-header { text-align: center; padding: 48px 24px 32px; border-bottom: 1px solid #e8e4e0; background: #fff; }
-        .site-header h1 { font-size: 2.4em; letter-spacing: 4px; text-transform: uppercase; color: #1a1a1a; }
-        .site-header .tagline { color: #999; font-size: 1em; margin-top: 8px; font-style: italic; }
-        .container { max-width: 780px; margin: 0 auto; padding: 40px 24px 60px; }
-        .post-card { background: #fff; padding: 28px 32px; margin: 20px 0; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: box-shadow 0.2s; }
-        .post-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
-        .post-card a { color: #1a1a1a; text-decoration: none; font-size: 1.3em; font-weight: 700; line-height: 1.3; }
-        .post-card a:hover { color: #c9a96e; }
-        .post-card .excerpt { color: #666; margin-top: 10px; font-size: 0.95em; line-height: 1.6; }
-        .post-card .meta { color: #aaa; font-size: 0.82em; margin-top: 12px; }
-        .post-card .post-thumb { width: 100%; border-radius: 8px; margin-bottom: 16px; }
-        .empty { text-align: center; padding: 60px; color: #aaa; }
-        .site-footer { text-align: center; padding: 32px 24px; border-top: 1px solid #e8e4e0; background: #fff; font-size: 0.85em; color: #999; }
-        .site-footer a { color: #c9a96e; text-decoration: none; }
+        body { font-family: 'Inter', -apple-system, sans-serif; line-height: 1.6; color: #1a1a1a; background: #fafaf9; }
+
+        /* Navigation */
+        .nav { background: #fff; border-bottom: 1px solid #e5e5e5; position: sticky; top: 0; z-index: 100; }
+        .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+        .nav-brand { font-family: 'Playfair Display', serif; font-size: 1.4em; font-weight: 700; color: #1a1a1a; text-decoration: none; }
+        .nav-brand span { color: #c9a96e; }
+        .nav-links { display: flex; gap: 24px; list-style: none; }
+        .nav-links a { color: #666; text-decoration: none; font-size: 0.9em; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: #c9a96e; }
+        .nav-toggle { display: none; background: none; border: none; font-size: 1.5em; cursor: pointer; color: #1a1a1a; }
+
+        /* Hero */
+        .hero { background: linear-gradient(135deg, #1a1a1a 0%, #2d2520 100%); color: #fff; padding: 64px 24px; text-align: center; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 2.4em; margin-bottom: 12px; }
+        .hero p { color: #ccc; font-size: 1.1em; max-width: 600px; margin: 0 auto; }
+
+        /* Main */
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 24px 60px; }
+        .section-title { font-family: 'Playfair Display', serif; font-size: 1.6em; margin-bottom: 24px; color: #1a1a1a; }
+
+        /* Card Grid */
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+        .card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.06); transition: box-shadow 0.3s, transform 0.3s; }
+        .card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.12); transform: translateY(-2px); }
+        .card-img { width: 100%; height: 200px; object-fit: cover; background: #f0ede8; }
+        .card-body { padding: 20px 24px 24px; }
+        .card-tag { display: inline-block; background: #c9a96e; color: #fff; font-size: 0.7em; font-weight: 600; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .card-title { font-family: 'Playfair Display', serif; font-size: 1.15em; line-height: 1.3; margin-bottom: 8px; }
+        .card-title a { color: #1a1a1a; text-decoration: none; }
+        .card-title a:hover { color: #c9a96e; }
+        .card-excerpt { color: #666; font-size: 0.88em; line-height: 1.6; margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+        .card-meta { color: #aaa; font-size: 0.78em; }
+
+        /* Featured card */
+        .card.featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; }
+        .card.featured .card-img { height: 100%; min-height: 280px; }
+
+        /* Affiliate disclosure */
+        .disclosure { background: #f7f5f0; border-radius: 12px; padding: 16px 20px; margin-bottom: 32px; font-size: 0.82em; color: #888; }
+
+        /* Footer */
+        .footer { background: #1a1a1a; color: #999; padding: 48px 24px; }
+        .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
+        .footer h4 { color: #fff; font-size: 0.9em; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+        .footer p { font-size: 0.85em; line-height: 1.8; }
+        .footer a { color: #c9a96e; text-decoration: none; }
+        .footer a:hover { color: #dfc490; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 8px; }
+        .footer-links a { color: #999; font-size: 0.85em; }
+        .footer-links a:hover { color: #c9a96e; }
+        .footer-bottom { max-width: 1100px; margin: 0 auto; padding-top: 24px; margin-top: 24px; border-top: 1px solid #333; text-align: center; font-size: 0.8em; }
+
+        /* Ad placeholder */
+        .ad-slot { background: #f5f3ee; border: 1px dashed #ddd; border-radius: 12px; padding: 24px; text-align: center; margin: 32px 0; color: #aaa; font-size: 0.85em; min-height: 90px; display: flex; align-items: center; justify-content: center; }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8em; }
+            .card-grid { grid-template-columns: 1fr; }
+            .card.featured { grid-template-columns: 1fr; }
+            .card.featured .card-img { height: 200px; }
+            .footer-inner { grid-template-columns: 1fr; gap: 24px; }
+            .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; background: #fff; flex-direction: column; padding: 16px 24px; border-bottom: 1px solid #e5e5e5; }
+            .nav-links.open { display: flex; }
+            .nav-toggle { display: block; }
+        }
     </style>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8049649445649586" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="site-header">
-        <h1>TrendLoop USA</h1>
-        <p class="tagline">Curated fashion intelligence, delivered daily</p>
-    </header>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-brand">TrendLoop <span>USA</span></a>
+            <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/disclaimer.html">Disclaimer</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Fashion Trends & Style Guides</h1>
+        <p>Expert fashion advice, trend analysis, and curated product picks -- updated daily.</p>
+    </section>
+
+    <!-- Main Content -->
     <div class="container">
-        <div class="post-card">
-            <a href="/posts/001.html">The Enduring Allure of '90s Minimalism: A Refined Resurgence for the Modern Wardrobe</a>
-            <p class="excerpt">Dive into the refined resurgence of '90s minimalism. Discover how clean lines, impeccable fabrication, and a pared-back palette define luxury now, echoing icons like Carolyn Bessette-Kennedy.</p>
-            <p class="meta">By TrendLoop USA Team</p>
+        <!-- Affiliate Disclosure -->
+        <div class="disclosure">
+            This site contains affiliate links. If you purchase through our links, we may earn a small commission at no extra cost to you. <a href="/disclaimer.html">Learn more</a>.
         </div>
-        <div class="post-card">
-            <a href="/2026-02-20-flattering-plus-size-outfit-ideas-for-summer-vacations-2026.html">Flattering Plus Size Outfit Ideas for Summer Vacations 2026</a>
-            <p class="excerpt">Flattering Plus Size Outfit Ideas for Summer Vacations 2026 - Expert fashion advice and curated product picks for 2026.</p>
-            <p class="meta">By TrendLoop USA Team -- 2026-02-20</p>
+
+        <h2 class="section-title">Latest Articles</h2>
+
+        <!-- Ad Slot -->
+        <div class="ad-slot">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8049649445649586" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
-        <div class="post-card">
-            <a href="/2026-02-20-investing-in-a-classic-designer-handbag-what-to-consider-now.html">Investing in a Classic Designer Handbag: What to Consider Now</a>
-            <p class="excerpt">Investing in a Classic Designer Handbag: What to Consider Now - Expert fashion advice and curated product picks for 2026.</p>
-            <p class="meta">By TrendLoop USA Team -- 2026-02-20</p>
+
+        <div class="card-grid">
+            <!-- Featured Post -->
+            <div class="card featured">
+                <img class="card-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&h=400&fit=crop" alt="90s Minimalism Fashion" loading="lazy">
+                <div class="card-body">
+                    <span class="card-tag">Featured</span>
+                    <h3 class="card-title"><a href="/posts/001.html">The Enduring Allure of '90s Minimalism: A Refined Resurgence for the Modern Wardrobe</a></h3>
+                    <p class="card-excerpt">Dive into the refined resurgence of '90s minimalism. Discover how clean lines, impeccable fabrication, and a pared-back palette define luxury now.</p>
+                    <p class="card-meta">By TrendLoop USA Team</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=600&h=400&fit=crop" alt="Plus Size Summer Outfits" loading="lazy">
+                <div class="card-body">
+                    <span class="card-tag">Trending</span>
+                    <h3 class="card-title"><a href="/2026-02-20-flattering-plus-size-outfit-ideas-for-summer-vacations-2026.html">Flattering Plus Size Outfit Ideas for Summer Vacations 2026</a></h3>
+                    <p class="card-excerpt">Discover flattering, comfortable, and stylish outfit ideas perfect for your summer getaway. Curated picks for every body type.</p>
+                    <p class="card-meta">Feb 20, 2026</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600&h=400&fit=crop" alt="Designer Handbag Guide" loading="lazy">
+                <div class="card-body">
+                    <span class="card-tag">Guide</span>
+                    <h3 class="card-title"><a href="/2026-02-20-investing-in-a-classic-designer-handbag-what-to-consider-now.html">Investing in a Classic Designer Handbag: What to Consider Now</a></h3>
+                    <p class="card-excerpt">A smart shopper's guide to investing in designer handbags that hold their value and elevate your wardrobe.</p>
+                    <p class="card-meta">Feb 20, 2026</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&h=400&fit=crop" alt="Luxury Fashion SS26" loading="lazy">
+                <div class="card-body">
+                    <span class="card-tag">Analysis</span>
+                    <h3 class="card-title"><a href="/2026-02-20-ss26-the-ethereal-edge-of-elevated-luxury-navigating-the-new.html">SS26: The Ethereal Edge of Elevated Luxury</a></h3>
+                    <p class="card-excerpt">Navigating the new codes of desire -- runway trends and investment pieces for Spring/Summer 2026.</p>
+                    <p class="card-meta">Feb 20, 2026</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&h=400&fit=crop" alt="Fashion Trends" loading="lazy">
+                <div class="card-body">
+                    <span class="card-tag">Hot</span>
+                    <h3 class="card-title"><a href="/2026-02-20-style-alert-decoding-today-s-hottest-fashion-trend.html">Style Alert! Decoding Today's Hottest Fashion Trends</a></h3>
+                    <p class="card-excerpt">Stay ahead of the curve with our breakdown of the trends dominating social media and runways right now.</p>
+                    <p class="card-meta">Feb 20, 2026</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&h=400&fit=crop" alt="Sustainable Fashion" loading="lazy">
+                <div class="card-body">
+                    <span class="card-tag">Guide</span>
+                    <h3 class="card-title"><a href="/2026-02-20-top-sustainable-fashion-trends-shaping-2026-style-choices.html">Top Sustainable Fashion Trends Shaping 2026</a></h3>
+                    <p class="card-excerpt">How to build an eco-conscious wardrobe without sacrificing style. The biggest sustainable fashion trends of the year.</p>
+                    <p class="card-meta">Feb 20, 2026</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&h=400&fit=crop" alt="Blazer and Jeans" loading="lazy">
+                <div class="card-body">
+                    <span class="card-tag">Guide</span>
+                    <h3 class="card-title"><a href="/2026-02-20-how-to-style-a-blazer-with-jeans-for-smart-casual-look.html">How to Style a Blazer with Jeans for Smart Casual</a></h3>
+                    <p class="card-excerpt">Master the blazer-and-jeans combination for work, dates, and weekend brunch. Styling tips for every body type.</p>
+                    <p class="card-meta">Feb 20, 2026</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="https://images.unsplash.com/photo-1551854838-212c50b4c184?w=600&h=400&fit=crop" alt="Affordable Denim" loading="lazy">
+                <div class="card-body">
+                    <span class="card-tag">Budget</span>
+                    <h3 class="card-title"><a href="/2026-02-20-best-affordable-denim-jeans-under-50-for-women-s-everyday-we.html">Best Affordable Denim Jeans Under $50</a></h3>
+                    <p class="card-excerpt">Great jeans don't have to cost a fortune. Our tested picks for the best budget denim you can buy right now.</p>
+                    <p class="card-meta">Feb 20, 2026</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&h=400&fit=crop" alt="Capsule Wardrobe" loading="lazy">
+                <div class="card-body">
+                    <span class="card-tag">Guide</span>
+                    <h3 class="card-title"><a href="/2026-02-20-the-complete-guide-to-building-a-minimalist-capsule-wardrobe.html">The Complete Guide to Building a Minimalist Capsule Wardrobe</a></h3>
+                    <p class="card-excerpt">Simplify your closet and maximize your outfits. A step-by-step guide to curating a wardrobe that works harder.</p>
+                    <p class="card-meta">Feb 20, 2026</p>
+                </div>
+            </div>
         </div>
-        <div class="post-card">
-            <a href="/2026-02-20-ss26-the-ethereal-edge-of-elevated-luxury-navigating-the-new.html">SS26: The Ethereal Edge of Elevated Luxury – Navigating the New Codes of Desire</a>
-            <p class="excerpt">SS26: The Ethereal Edge of Elevated Luxury – Navigating the New Codes of Desire - Expert luxury fashion analysis, runway trends, and investment pieces for Spring/Summer 2026.</p>
-            <p class="meta">By TrendLoop USA Team -- 2026-02-20</p>
+
+        <!-- Ad Slot Bottom -->
+        <div class="ad-slot" style="margin-top: 40px;">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8049649445649586" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
-        <div class="post-card">
-            <a href="/2026-02-20-style-alert-decoding-today-s-hottest-fashion-trend.html">Style Alert! Decoding Today's Hottest Fashion Trends You Need to Know</a>
-            <p class="excerpt">Style Alert! Decoding Today's Hottest Fashion Trends You Need to Know - Discover the latest fashion trends in the USA.</p>
-            <p class="meta">By TrendLoop USA Team -- 2026-02-20</p>
-        </div>
-        <div class="post-card">
-            <a href="/2026-02-20-your-ultimate-guide-to-today-s-hottest-fashion-tre.html">Your Ultimate Guide to Today's Hottest Fashion Trends!</a>
-            <p class="excerpt">Your Ultimate Guide to Today's Hottest Fashion Trends! - Discover the latest fashion trends in the USA.</p>
-            <p class="meta">By TrendLoop USA Team -- 2026-02-20</p>
-        </div>
-        <div class="post-card">
-            <a href="/2026-02-20-top-sustainable-fashion-trends-shaping-2026-style-choices.html">Top Sustainable Fashion Trends Shaping 2026 Style Choices</a>
-            <p class="excerpt">Top Sustainable Fashion Trends Shaping 2026 Style Choices - Expert fashion advice and curated product picks for 2026.</p>
-            <p class="meta">By TrendLoop USA Team -- 2026-02-20</p>
-        </div>
-        <div class="post-card">
-            <a href="/2026-02-20-how-to-style-a-blazer-with-jeans-for-smart-casual-look.html">How to Style a Blazer with Jeans for Smart Casual Look</a>
-            <p class="excerpt">How to Style a Blazer with Jeans for Smart Casual Look - Expert fashion advice and curated product picks for 2026.</p>
-            <p class="meta">By TrendLoop USA Team -- 2026-02-20</p>
-        </div>
-        <div class="post-card">
-            <a href="/2026-02-20-best-affordable-denim-jeans-under-50-for-women-s-everyday-we.html">Best Affordable Denim Jeans Under $50 for Women's Everyday Wear</a>
-            <p class="excerpt">Best Affordable Denim Jeans Under $50 for Women's Everyday Wear - Expert fashion advice and curated product picks for 2026.</p>
-            <p class="meta">By TrendLoop USA Team -- 2026-02-20</p>
-        </div>
-        
     </div>
-    <footer class="site-footer">
-        <p>&copy; 2026 <strong>TrendLoop USA</strong>. All rights reserved.</p>
-        <p>Contact: <a href="mailto:contact@trendloopusa.net">contact@trendloopusa.net</a></p>
-        <p style="margin-top:8px;">Powered by AI-curated fashion intelligence.</p>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <h4>TrendLoop USA</h4>
+                <p>Expert fashion advice, trend analysis, and curated product picks. We help you make smart style decisions without the guesswork.</p>
+                <p style="margin-top: 12px;">Contact: <a href="mailto:contact@trendloopusa.net">contact@trendloopusa.net</a></p>
+            </div>
+            <div>
+                <h4>Pages</h4>
+                <ul class="footer-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/feed.xml">RSS Feed</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="/privacy.html">Privacy Policy</a></li>
+                    <li><a href="/disclaimer.html">Disclaimer & FTC</a></li>
+                    <li><a href="/terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 TrendLoop USA. All rights reserved. | <a href="/disclaimer.html">Affiliate Disclosure</a></p>
+        </div>
     </footer>
 </body>
 </html>
