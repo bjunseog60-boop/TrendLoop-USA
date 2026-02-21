@@ -1,0 +1,53 @@
+server {
+    server_name trendloopusa.net www.trendloopusa.net;
+
+    root /home/ubuntu/TrendLoop-USA/docs;
+    index index.html;
+
+    # 정적 파일 캐시 (성능 최적화)
+    location ~* \.(html|css|js|png|jpg|ico)$ {
+        expires 1h;
+        add_header Cache-Control "public, immutable";
+    }
+
+    # 보안 헤더
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header X-Content-Type-Options "nosniff" always;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    # .env, .git 등 보안 파일 접근 차단
+    location ~ /\. {
+        deny all;
+        return 404;
+    }
+
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/trendloopusa.net/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/trendloopusa.net/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+
+}
+server {
+    if ($host = www.trendloopusa.net) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    if ($host = trendloopusa.net) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    listen 80;
+    server_name trendloopusa.net www.trendloopusa.net;
+    return 404; # managed by Certbot
+
+
+
+
+}

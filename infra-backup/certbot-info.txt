@@ -1,0 +1,11 @@
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Found the following certs:
+  Certificate Name: trendloopusa.net
+    Serial Number: 525416c0bbfb6aefd99825c0233eee35212
+    Key Type: ECDSA
+    Domains: trendloopusa.net www.trendloopusa.net
+    Expiry Date: 2026-05-21 07:36:56+00:00 (VALID: 89 days)
+    Certificate Path: /etc/letsencrypt/live/trendloopusa.net/fullchain.pem
+    Private Key Path: /etc/letsencrypt/live/trendloopusa.net/privkey.pem
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

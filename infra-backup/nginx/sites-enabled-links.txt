@@ -1,0 +1,4 @@
+total 8
+drwxr-xr-x 2 root root 4096 Feb 20 06:35 .
+drwxr-xr-x 8 root root 4096 Feb 20 08:35 ..
+lrwxrwxrwx 1 root root   36 Feb 20 06:35 trendloop -> /etc/nginx/sites-available/trendloop
