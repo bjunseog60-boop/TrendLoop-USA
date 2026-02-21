@@ -1,0 +1,266 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 120, in task_content_generation
+    results = run_daily_schedule()
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/TrendLoop-USA/agents/content_scheduler.py", line 218, in run_daily_schedule
+    print("=" * 60)
+ValueError: I/O operation on closed file.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 337, in main
+    task_content_generation()
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 124, in task_content_generation
+    log(f"TrendLoop content error: {e}", "ERROR")
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 63, in log
+    print(line, flush=True)
+ValueError: I/O operation on closed file.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 341, in main
+    log(f"Content generation FAILED: {e}", "ERROR")
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 63, in log
+    print(line, flush=True)
+ValueError: I/O operation on closed file.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 398, in <module>
+    main()
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 381, in main
+    log(f"[Cycle {cycle}] Unexpected error: {e}", "ERROR")
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 63, in log
+    print(line, flush=True)
+ValueError: I/O operation on closed file.
+Traceback (most recent call last):
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 120, in task_content_generation
+    results = run_daily_schedule()
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/TrendLoop-USA/agents/content_scheduler.py", line 218, in run_daily_schedule
+    print("=" * 60)
+ValueError: I/O operation on closed file.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 337, in main
+    task_content_generation()
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 124, in task_content_generation
+    log(f"TrendLoop content error: {e}", "ERROR")
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 63, in log
+    print(line, flush=True)
+ValueError: I/O operation on closed file.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 341, in main
+    log(f"Content generation FAILED: {e}", "ERROR")
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 63, in log
+    print(line, flush=True)
+ValueError: I/O operation on closed file.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 398, in <module>
+    main()
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 381, in main
+    log(f"[Cycle {cycle}] Unexpected error: {e}", "ERROR")
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 63, in log
+    print(line, flush=True)
+ValueError: I/O operation on closed file.
+Traceback (most recent call last):
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 120, in task_content_generation
+    results = run_daily_schedule()
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/TrendLoop-USA/agents/content_scheduler.py", line 218, in run_daily_schedule
+    print("=" * 60)
+ValueError: I/O operation on closed file.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 337, in main
+    task_content_generation()
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 124, in task_content_generation
+    log(f"TrendLoop content error: {e}", "ERROR")
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 63, in log
+    print(line, flush=True)
+ValueError: I/O operation on closed file.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 341, in main
+    log(f"Content generation FAILED: {e}", "ERROR")
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 63, in log
+    print(line, flush=True)
+ValueError: I/O operation on closed file.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 398, in <module>
+    main()
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 381, in main
+    log(f"[Cycle {cycle}] Unexpected error: {e}", "ERROR")
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 63, in log
+    print(line, flush=True)
+ValueError: I/O operation on closed file.
+Traceback (most recent call last):
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 120, in task_content_generation
+    results = run_daily_schedule()
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/TrendLoop-USA/agents/content_scheduler.py", line 218, in run_daily_schedule
+    print("=" * 60)
+ValueError: I/O operation on closed file.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 337, in main
+    task_content_generation()
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 124, in task_content_generation
+    log(f"TrendLoop content error: {e}", "ERROR")
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 63, in log
+    print(line, flush=True)
+ValueError: I/O operation on closed file.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 341, in main
+    log(f"Content generation FAILED: {e}", "ERROR")
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 63, in log
+    print(line, flush=True)
+ValueError: I/O operation on closed file.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 398, in <module>
+    main()
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 381, in main
+    log(f"[Cycle {cycle}] Unexpected error: {e}", "ERROR")
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 63, in log
+    print(line, flush=True)
+ValueError: I/O operation on closed file.
+Traceback (most recent call last):
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 120, in task_content_generation
+    results = run_daily_schedule()
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/TrendLoop-USA/agents/content_scheduler.py", line 218, in run_daily_schedule
+    print("=" * 60)
+ValueError: I/O operation on closed file.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 337, in main
+    task_content_generation()
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 124, in task_content_generation
+    log(f"TrendLoop content error: {e}", "ERROR")
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 63, in log
+    print(line, flush=True)
+ValueError: I/O operation on closed file.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 341, in main
+    log(f"Content generation FAILED: {e}", "ERROR")
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 63, in log
+    print(line, flush=True)
+ValueError: I/O operation on closed file.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 398, in <module>
+    main()
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 381, in main
+    log(f"[Cycle {cycle}] Unexpected error: {e}", "ERROR")
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 63, in log
+    print(line, flush=True)
+ValueError: I/O operation on closed file.
+Traceback (most recent call last):
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 120, in task_content_generation
+    results = run_daily_schedule()
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/TrendLoop-USA/agents/content_scheduler.py", line 218, in run_daily_schedule
+    print("=" * 60)
+ValueError: I/O operation on closed file.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 337, in main
+    task_content_generation()
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 124, in task_content_generation
+    log(f"TrendLoop content error: {e}", "ERROR")
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 63, in log
+    print(line, flush=True)
+ValueError: I/O operation on closed file.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 341, in main
+    log(f"Content generation FAILED: {e}", "ERROR")
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 63, in log
+    print(line, flush=True)
+ValueError: I/O operation on closed file.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 398, in <module>
+    main()
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 381, in main
+    log(f"[Cycle {cycle}] Unexpected error: {e}", "ERROR")
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 63, in log
+    print(line, flush=True)
+ValueError: I/O operation on closed file.
+Traceback (most recent call last):
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 120, in task_content_generation
+    results = run_daily_schedule()
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/TrendLoop-USA/agents/content_scheduler.py", line 218, in run_daily_schedule
+    print("=" * 60)
+ValueError: I/O operation on closed file.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 337, in main
+    task_content_generation()
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 124, in task_content_generation
+    log(f"TrendLoop content error: {e}", "ERROR")
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 63, in log
+    print(line, flush=True)
+ValueError: I/O operation on closed file.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 341, in main
+    log(f"Content generation FAILED: {e}", "ERROR")
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 63, in log
+    print(line, flush=True)
+ValueError: I/O operation on closed file.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 398, in <module>
+    main()
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 381, in main
+    log(f"[Cycle {cycle}] Unexpected error: {e}", "ERROR")
+  File "/home/ubuntu/TrendLoop-USA/master_agent.py", line 63, in log
+    print(line, flush=True)
+ValueError: I/O operation on closed file.
