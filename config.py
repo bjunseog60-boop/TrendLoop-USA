@@ -30,7 +30,7 @@ AMAZON_TAG = os.environ.get("AMAZON_TAG", "trendloop-20")
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 # 블로그 설정
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-BLOG_BASE_URL = os.environ.get("BLOG_BASE_URL", "https://bjunseog60-boop.github.io/TrendLoop-USA")
+BLOG_BASE_URL = os.environ.get("BLOG_BASE_URL", "https://trendloopusa.net")
 
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 # 트렌드 검색 설정

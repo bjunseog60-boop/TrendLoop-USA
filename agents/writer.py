@@ -37,7 +37,7 @@ def _call_gemini(client, prompt: str) -> str:
 
     # client.models.generate_content() - Gemini API v1 텍스트 생성
     response = client.models.generate_content(
-        model="gemini-2.5-flash",
+        model="gemini-2.5-pro",
         contents=prompt,
     )
     tracker.log_api_call("gemini")
@@ -51,16 +51,39 @@ def _make_amazon_link(keyword: str) -> str:
 
 def generate_blog_post(keywords: list[dict]) -> dict:
     """키워드 → Gemini로 블로그 글 생성 → HTML 파일 저장"""
-    if not GEMINI_API_KEY:
-        print("[작가] 오류: GEMINI_API_KEY가 설정되지 않았습니다.")
-        return {}
-
     keyword_names = [kw["keyword"] for kw in keywords]
     amazon_links = {kw: _make_amazon_link(kw) for kw in keyword_names}
     links_text = "\n".join(f"- {kw}: {url}" for kw, url in amazon_links.items())
 
-    # genai.Client() - API 키 기반 인증
-    client = genai.Client(api_key=GEMINI_API_KEY)
+    # genai.Client() - Vertex AI 기반 인증 (Google Cloud 크레딧 사용)
+    client = genai.Client(vertexai=True, project="fashion-money-maker", location="us-central1")
+
+    # Generate Imagen 4 Ultra Image
+    print("[작가] Imagen 4 Ultra로 커버 이미지 생성 중...")
+    image_url = ""
+    try:
+        from google.genai import types
+        img_response = client.models.generate_images(
+            model="imagen-4.0-ultra-generate-001",
+            prompt=f"A photorealistic fashion editorial magazine cover featuring {keyword_names[0]} fashion trend. Clean, modern, high-end Vogue style.",
+            config=types.GenerateImagesConfig(number_of_images=1, output_mime_type="image/jpeg", aspect_ratio="16:9")
+        )
+        if img_response.generated_images:
+            image_data = img_response.generated_images[0].image.image_bytes
+            
+            # Save the image
+            today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+            slug_base = re.sub(r"[^a-z0-9]+", "-", keyword_names[0].lower()).strip("-")[:20]
+            img_filename = f"{today_str}-{slug_base}.jpg"
+            img_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "docs", "images", "generated")
+            os.makedirs(img_dir, exist_ok=True)
+            
+            with open(os.path.join(img_dir, img_filename), "wb") as f:
+                f.write(image_data)
+            image_url = f"/images/generated/{img_filename}"
+            print(f"[작가] 이미지 생성 완료: {image_url}")
+    except Exception as e:
+        print(f"[작가] Imagen 4 API 오류: {e}")
 
     prompt = f"""You are a professional fashion blogger writing for a US audience.
 
@@ -82,6 +105,7 @@ Write an engaging, SEO-optimized blog post about today's hottest fashion trends.
 8. Use H2 subheadings for each trend
 9. Output pure HTML content (no ```html``` markers, no <html>/<head>/<body> tags - just the article content)
 10. Add a small disclaimer at the bottom: "This post contains affiliate links. We may earn a commission at no extra cost to you."
+11. Add this image right after the H1 title: <img src="{image_url}" alt="{keyword_names[0]} fashion trend" style="width:100%; border-radius:8px; margin: 20px 0;">
 
 Write the blog post now:"""
 

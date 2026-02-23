@@ -3,583 +3,524 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TrendLoop USA - Fashion Trends & Style Guides 2026</title>
-    <meta name="description" content="AI-powered fashion trend analysis, Gen Z style guides, and curated product picks. Your daily source for the hottest looks, dupes, and affordable alternatives.">
-    <meta name="author" content="TrendLoop USA Team">
+    <title>TrendLoop USA — Fashion Intelligence</title>
+    <meta name="description" content="Expert trend analysis, editorial style guides, and curated fashion picks. Updated daily.">
+    <meta name="author" content="TrendLoop USA">
     <link rel="canonical" href="https://trendloopusa.net/">
     <link rel="alternate" type="application/rss+xml" title="TrendLoop USA" href="https://trendloopusa.net/feed.xml">
-    <meta property="og:title" content="TrendLoop USA - Fashion Trends & Style Guides 2026">
-    <meta property="og:description" content="AI-powered fashion trend analysis, Gen Z style guides, and curated product picks.">
+    <meta property="og:title" content="TrendLoop USA — Fashion Intelligence">
+    <meta property="og:description" content="Expert trend analysis, editorial style guides, and curated fashion picks.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://trendloopusa.net/">
-    <meta property="og:image" content="https://trendloopusa.net/images/hero-editorial.webp">
-    <meta property="og:site_name" content="TrendLoop USA">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@TrendLoopUSA">
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "TrendLoop USA",
-        "url": "https://trendloopusa.net",
-        "description": "AI-powered fashion trends and style guides for Gen Z",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://trendloopusa.net/?s={search_term_string}",
-            "query-input": "required name=search_term_string"
-        }
-    }
-    </script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"TrendLoop USA","url":"https://trendloopusa.net"}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,200;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8049649445649586" crossorigin="anonymous"></script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', -apple-system, sans-serif; line-height: 1.6; color: #1a1a2e; background: #ffffff; }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --bg: #ffffff;
-            --bg-off: #f8f9fa;
-            --text: #1a1a2e;
-            --text-light: #6b7280;
-            --text-muted: #9ca3af;
-            --border: #e5e7eb;
-            --pink: #ff2d55;
-            --pink-light: #fff0f3;
-            --blue: #0066ff;
-            --blue-light: #eef4ff;
-            --lime: #32d74b;
-            --lime-light: #edfff0;
-            --orange: #ff6b00;
-            --orange-light: #fff5eb;
-            --purple: #af52de;
-            --purple-light: #f8f0ff;
-            --yellow: #ffd60a;
-            --yellow-light: #fffde6;
+            --black:   #1c1b1b;         /* The Row: #1c1b1b near-black */
+            --white:   #FFFFFF;
+            --off:     #f9f9f9;         /* SSENSE: #f9f9f9 light bg */
+            --gray:    #6a6a6a;         /* The Row: #6a6a6a mid-gray */
+            --gray-lt: #b6b6b6;         /* SSENSE: light mid-tone */
+            --subtle:  #dddddd;         /* The Row: #dddddd border */
+            --subtle2: #e9e9e9;         /* The Row: secondary border */
+            --font-sans: 'DM Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            --font-disp: 'DM Serif Display', Georgia, serif;
+            --ease-luxury: cubic-bezier(0.645, 0.045, 0.355, 1); /* The Row */
+            --t-fast:  0.2s ease;
+            --t-base:  0.3s ease;
+            --t-slow:  0.5s var(--ease-luxury);
+            --product-gap: 60px;        /* The Row: exactly 60px */
         }
 
-        /* === NAVIGATION === */
-        .nav { background: var(--bg); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
-        .nav-ticker { background: var(--pink); padding: 6px 0; text-align: center; overflow: hidden; }
-        .nav-ticker span { color: #fff; font-family: 'Barlow Condensed', sans-serif; font-size: 0.7em; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; }
-        .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
-        .nav-brand { font-family: 'Barlow Condensed', sans-serif; font-size: 1.8em; font-weight: 900; color: var(--text); text-decoration: none; text-transform: uppercase; letter-spacing: -0.5px; }
-        .nav-brand span { color: var(--pink); }
-        .nav-links { display: flex; gap: 4px; list-style: none; }
-        .nav-links a { color: var(--text-light); text-decoration: none; font-size: 0.78em; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; padding: 6px 12px; border-radius: 20px; transition: all 0.2s; }
-        .nav-links a:hover { color: var(--pink); background: var(--pink-light); }
-        .nav-toggle { display: none; background: none; border: none; font-size: 1.5em; cursor: pointer; color: var(--text); }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-sans); font-weight: 300; color: var(--black); background: var(--white); -webkit-font-smoothing: antialiased; }
 
-        /* === CATEGORY PILLS === */
-        .categories { padding: 12px 20px; overflow-x: auto; white-space: nowrap; border-bottom: 1px solid var(--border); background: var(--bg-off); -webkit-overflow-scrolling: touch; }
-        .categories::-webkit-scrollbar { display: none; }
-        .cat-inner { max-width: 1200px; margin: 0 auto; display: flex; gap: 8px; }
-        .cat-pill { display: inline-block; padding: 6px 16px; border-radius: 20px; font-size: 0.75em; font-weight: 600; text-decoration: none; transition: all 0.2s; border: 1.5px solid transparent; white-space: nowrap; }
-        .cat-pill.active { background: var(--pink); color: #fff; border-color: var(--pink); }
-        .cat-pill:not(.active) { color: var(--text-light); border-color: var(--border); background: var(--bg); }
-        .cat-pill:not(.active):hover { border-color: var(--pink); color: var(--pink); }
-
-        /* === HERO === */
-        .hero { position: relative; overflow: hidden; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); min-height: 420px; display: flex; align-items: center; }
-        .hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.35; }
-        .hero-content { max-width: 1200px; margin: 0 auto; padding: 60px 24px; width: 100%; position: relative; z-index: 2; }
-        .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--pink); color: #fff; font-family: 'Barlow Condensed', sans-serif; font-size: 0.65em; font-weight: 700; padding: 5px 14px; text-transform: uppercase; letter-spacing: 2px; border-radius: 4px; margin-bottom: 20px; }
-        .hero-badge .dot { width: 6px; height: 6px; background: #fff; border-radius: 50%; animation: pulse 1.5s infinite; }
-        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
-        .hero h1 { font-family: 'Barlow Condensed', sans-serif; font-size: 3.8em; font-weight: 900; color: #fff; line-height: 1.0; text-transform: uppercase; margin-bottom: 18px; max-width: 700px; }
-        .hero h1 em { font-style: normal; color: var(--pink); }
-        .hero p { color: rgba(255,255,255,0.75); font-size: 1.05em; max-width: 560px; line-height: 1.7; }
-        .hero-shapes { position: absolute; right: -50px; top: -50px; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(255,45,85,0.2) 0%, transparent 70%); z-index: 1; }
-        .hero-shapes2 { position: absolute; left: 30%; bottom: -100px; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle, rgba(0,102,255,0.15) 0%, transparent 70%); z-index: 1; }
-
-        /* === CONTAINER === */
-        .container { max-width: 1200px; margin: 0 auto; padding: 32px 20px; }
-
-        /* === SECTION HEADERS === */
-        .section-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
-        .section-head h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.7em; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text); }
-        .section-head h2 .accent { color: var(--pink); }
-        .section-head .more { font-size: 0.78em; font-weight: 600; color: var(--pink); text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px; border: 1.5px solid var(--pink); padding: 5px 14px; border-radius: 20px; transition: all 0.2s; }
-        .section-head .more:hover { background: var(--pink); color: #fff; }
-
-        /* === CARD GRID === */
-        .grid-featured { display: grid; grid-template-columns: 1.4fr 1fr; gap: 20px; margin-bottom: 40px; }
-        .grid-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin-bottom: 40px; }
-        .grid-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 40px; }
-
-        .card { background: var(--bg); border-radius: 14px; overflow: hidden; border: 1px solid var(--border); transition: all 0.3s; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 20px 60px rgba(0,0,0,0.12); border-color: transparent; }
-        .card a { text-decoration: none; color: inherit; display: block; }
-        .card-img { width: 100%; object-fit: cover; display: block; background: #f0f0f0; }
-        .card-img-wrap { position: relative; overflow: hidden; }
-        .card-big .card-img { height: 340px; }
-        .card-sm .card-img { height: 200px; }
-        .card-body { padding: 18px 20px; }
-        .card-tag { display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-size: 0.65em; font-weight: 700; padding: 3px 10px; text-transform: uppercase; letter-spacing: 1.5px; border-radius: 4px; margin-bottom: 10px; }
-        .tag-trending { background: var(--pink-light); color: var(--pink); }
-        .tag-guide { background: var(--blue-light); color: var(--blue); }
-        .tag-hot { background: var(--orange-light); color: var(--orange); }
-        .tag-style { background: var(--purple-light); color: var(--purple); }
-        .tag-budget { background: var(--lime-light); color: #1a8f2d; }
-        .tag-featured { background: var(--yellow-light); color: #b8960c; }
-        .tag-dupe { background: #fff3e0; color: #e65100; }
-        .card h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; line-height: 1.2; color: var(--text); text-transform: uppercase; margin-bottom: 8px; }
-        .card-big h3 { font-size: 1.6em; }
-        .card-sm h3 { font-size: 1.15em; }
-        .card .excerpt { color: var(--text-light); font-size: 0.85em; line-height: 1.65; margin-bottom: 10px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-        .card .meta { color: var(--text-muted); font-size: 0.72em; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 8px; }
-        .meta-dot { width: 3px; height: 3px; background: var(--text-muted); border-radius: 50%; }
-
-        /* Gradient image placeholders */
-        .img-placeholder { width: 100%; display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', sans-serif; font-size: 2.5em; font-weight: 900; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 2px; }
-        .img-fashion { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-        .img-summer { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
-        .img-handbag { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
-        .img-luxury { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
-        .img-alert { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
-        .img-eco { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
-        .img-blazer { background: linear-gradient(135deg, #fccb90 0%, #d57eeb 100%); }
-        .img-denim { background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%); }
-        .img-capsule { background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); }
-        .img-dupe { background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%); }
-
-        /* === HOT TAKES STRIP === */
-        .hot-strip { background: var(--text); padding: 14px 0; }
-        .hot-inner { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; gap: 28px; align-items: center; overflow-x: auto; }
-        .hot-inner::-webkit-scrollbar { display: none; }
-        .hot-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 0.65em; font-weight: 700; background: var(--pink); color: #fff; padding: 3px 10px; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; flex-shrink: 0; }
-        .hot-item { color: rgba(255,255,255,0.55); font-size: 0.8em; font-weight: 500; white-space: nowrap; flex-shrink: 0; }
-        .hot-item strong { color: rgba(255,255,255,0.9); }
-
-        /* === DISCLOSURE === */
-        .disclosure { background: var(--bg-off); border-left: 4px solid var(--pink); border-radius: 0 8px 8px 0; padding: 14px 20px; margin-bottom: 28px; font-size: 0.82em; color: var(--text-light); }
-        .disclosure a { color: var(--pink); text-decoration: none; font-weight: 600; }
-        .disclosure a:hover { text-decoration: underline; }
-
-        /* === AD SLOT === */
-        .ad-slot { background: var(--bg-off); border: 1px dashed var(--border); border-radius: 10px; padding: 24px; text-align: center; margin: 28px 0; color: var(--text-muted); font-size: 0.82em; min-height: 90px; display: flex; align-items: center; justify-content: center; }
-
-        /* === TRENDING BAR === */
-        .trending-bar { background: var(--pink-light); border: 1px solid rgba(255,45,85,0.15); border-radius: 10px; padding: 14px 20px; margin-bottom: 28px; display: flex; align-items: center; gap: 16px; }
-        .trending-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.72em; font-weight: 700; background: var(--pink); color: #fff; padding: 4px 12px; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; flex-shrink: 0; }
-        .trending-items { display: flex; gap: 20px; overflow-x: auto; flex: 1; }
-        .trending-items::-webkit-scrollbar { display: none; }
-        .trending-item { font-size: 0.8em; font-weight: 600; color: var(--text); white-space: nowrap; text-decoration: none; }
-        .trending-item:hover { color: var(--pink); }
-        .trending-num { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; color: var(--pink); margin-right: 4px; }
-
-        /* === NEWSLETTER === */
-        .newsletter { background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%); border-radius: 16px; padding: 40px; text-align: center; margin: 40px 0; }
-        .newsletter h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 2em; font-weight: 900; color: #fff; text-transform: uppercase; margin-bottom: 8px; }
-        .newsletter p { color: rgba(255,255,255,0.6); font-size: 0.9em; margin-bottom: 24px; }
-        .newsletter-form { display: flex; gap: 10px; max-width: 460px; margin: 0 auto; }
-        .newsletter-form input { flex: 1; padding: 12px 18px; border: none; border-radius: 8px; font-size: 0.9em; outline: none; }
-        .newsletter-form button { background: var(--pink); color: #fff; border: none; padding: 12px 24px; border-radius: 8px; font-weight: 700; font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.5px; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
-        .newsletter-form button:hover { background: #e0183f; }
-
-        /* === FOOTER === */
-        .footer { background: var(--text); color: rgba(255,255,255,0.5); padding: 52px 20px 28px; margin-top: 40px; }
-        .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; }
-        .footer-brand { font-family: 'Barlow Condensed', sans-serif; font-size: 1.5em; font-weight: 900; color: #fff; text-transform: uppercase; margin-bottom: 12px; }
-        .footer-brand span { color: var(--pink); }
-        .footer h4 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.85em; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px; }
-        .footer p { font-size: 0.85em; line-height: 1.8; }
-        .footer a { color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
-        .footer a:hover { color: var(--pink); }
-        .footer-links { list-style: none; }
-        .footer-links li { margin-bottom: 10px; }
-        .footer-links a { font-size: 0.85em; }
-        .footer-bottom { max-width: 1200px; margin: 28px auto 0; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; font-size: 0.75em; color: rgba(255,255,255,0.25); }
-        .footer-social { display: flex; gap: 10px; margin-top: 16px; }
-        .social-link { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.5); font-size: 0.8em; text-decoration: none; transition: all 0.2s; }
-        .social-link:hover { background: var(--pink); color: #fff; }
-
-        /* === MOBILE === */
-        @media (max-width: 900px) {
-            .footer-inner { grid-template-columns: 1fr 1fr; gap: 28px; }
+        /* ── NAV ─────────────────────────────── */
+        .nav {
+            position: sticky; top: 0; z-index: 200;
+            background: var(--white);
+            border-bottom: 1px solid var(--subtle);
         }
-        @media (max-width: 768px) {
-            .hero { min-height: 320px; }
-            .hero h1 { font-size: 2.4em; }
-            .grid-featured { grid-template-columns: 1fr; }
-            .grid-2col { grid-template-columns: 1fr; }
-            .card-big .card-img { height: 240px; }
-            .grid-cards { grid-template-columns: 1fr 1fr; }
-            .footer-inner { grid-template-columns: 1fr; gap: 24px; }
-            .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
-            .nav-links { display: none; position: absolute; top: 88px; left: 0; right: 0; background: var(--bg); flex-direction: column; padding: 12px 20px; border-bottom: 1px solid var(--border); box-shadow: 0 8px 24px rgba(0,0,0,0.1); z-index: 99; }
+        .nav-inner {
+            max-width: 1320px; margin: 0 auto;
+            padding: 0 48px;
+            display: flex; align-items: center; justify-content: space-between;
+            height: 64px;
+        }
+        .nav-brand {
+            font-family: var(--font-disp); font-style: italic;
+            font-size: 1.35rem; letter-spacing: -0.01em;
+            color: var(--black); text-decoration: none;
+        }
+        .nav-links { display: flex; gap: 2px; list-style: none; }
+        .nav-links a {
+            color: var(--gray); text-decoration: none;
+            font-size: 0.68rem; font-weight: 400;
+            letter-spacing: 0.14em; text-transform: uppercase;
+            padding: 8px 14px;
+            transition: color var(--t-fast);
+        }
+        .nav-links a:hover { color: var(--black); }
+        .nav-date {
+            font-size: 0.65rem; letter-spacing: 0.12em;
+            text-transform: uppercase; color: var(--gray);
+        }
+        .nav-toggle { display: none; background: none; border: none; cursor: pointer; color: var(--black); font-size: 1.3rem; }
+
+        /* ── SECTION LABEL ───────────────────── */
+        .label {
+            display: block;
+            font-size: 0.6rem; letter-spacing: 0.22em;
+            text-transform: uppercase; font-weight: 500;
+            color: var(--gray); margin-bottom: 12px;
+        }
+
+        /* ── HERO ────────────────────────────── */
+        .hero {
+            position: relative; overflow: hidden;
+            background: var(--black);
+            height: 90vh; min-height: 600px; max-height: 900px;
+        }
+        .hero-img {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+            object-fit: cover; object-position: center;
+            opacity: 0.72;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+        .hero-bg-fallback {
+            position: absolute; inset: 0;
+            background: linear-gradient(160deg, #1a1a1a 0%, #3a3a3a 50%, #0a0a0a 100%);
+        }
+        .hero-content {
+            position: absolute; bottom: 0; left: 0; right: 0;
+            padding: 0 80px 80px;
+            background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, transparent 100%);
+        }
+        .hero-issue {
+            font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase;
+            color: rgba(255,255,255,0.5); margin-bottom: 20px;
+        }
+        .hero-title {
+            font-family: var(--font-disp); font-style: italic;
+            font-size: clamp(2.8rem, 5vw, 5.5rem);
+            font-weight: 400; line-height: 1.05;
+            color: var(--white);
+            max-width: 780px; margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+        .hero-sub {
+            font-size: 0.9rem; font-weight: 300;
+            color: rgba(255,255,255,0.65); max-width: 480px;
+            line-height: 1.7; letter-spacing: 0.01em;
+        }
+        .hero-scroll {
+            position: absolute; right: 80px; bottom: 80px;
+            writing-mode: vertical-rl; text-orientation: mixed;
+            font-size: 0.6rem; letter-spacing: 0.2em;
+            text-transform: uppercase; color: rgba(255,255,255,0.35);
+            display: flex; align-items: center; gap: 12px;
+        }
+        .hero-scroll::before {
+            content: ''; display: block;
+            width: 1px; height: 40px;
+            background: rgba(255,255,255,0.25);
+        }
+
+        /* ── CONTAINER ───────────────────────── */
+        .wrap { max-width: 1320px; margin: 0 auto; padding: 0 48px; }
+
+        /* ── SECTION ─────────────────────────── */
+        .section { padding: 80px 0; border-top: 1px solid var(--subtle); }
+        .section-head {
+            display: flex; align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: 56px;
+        }
+        .section-head h2 {
+            font-family: var(--font-disp); font-style: italic;
+            font-size: 2.2rem; font-weight: 400;
+            letter-spacing: -0.02em; color: var(--black);
+        }
+        .section-head a {
+            font-size: 0.68rem; letter-spacing: 0.16em;
+            text-transform: uppercase; font-weight: 500;
+            color: var(--gray); text-decoration: none;
+            padding-bottom: 2px; border-bottom: 1px solid var(--subtle);
+            transition: color 0.2s, border-color 0.2s;
+        }
+        .section-head a:hover { color: var(--black); border-color: var(--black); }
+
+        /* ── FEATURED 2-COL ─────────────────── */
+        .grid-featured {
+            display: grid;
+            grid-template-columns: 1.6fr 1fr;
+            gap: var(--product-gap); /* The Row: 60px */
+        }
+        .grid-side { display: flex; flex-direction: column; gap: 48px; }
+
+        /* ── ARTICLE CARD ────────────────────── */
+        .article {
+            display: block; text-decoration: none; color: inherit;
+        }
+        .article-img-wrap {
+            overflow: hidden; position: relative;
+            background: var(--off);
+            margin-bottom: 24px;
+        }
+        .article-img-wrap img {
+            width: 100%; height: 100%;
+            object-fit: cover; display: block;
+            transition: transform var(--t-slow); /* The Row: luxury easing */
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+        .article:hover .article-img-wrap img { transform: scale(1.02); } /* The Row: subtle 1.02 */
+        .article-img-placeholder {
+            width: 100%; height: 100%;
+            background: var(--off);
+            display: flex; align-items: center; justify-content: center;
+        }
+        /* big card */
+        .article-big .article-img-wrap { aspect-ratio: 4/5; }
+        /* small card */
+        .article-sm .article-img-wrap  { aspect-ratio: 16/9; }
+        /* grid card */
+        .article-grid .article-img-wrap { aspect-ratio: 3/4; }
+
+        .article-cat {
+            font-size: 0.58rem; letter-spacing: 0.22em;
+            text-transform: uppercase; font-weight: 500;
+            color: var(--gray); margin-bottom: 10px; display: block;
+        }
+        .article-title {
+            font-family: var(--font-disp); font-style: italic;
+            font-weight: 400; line-height: 1.2;
+            letter-spacing: -0.01em; color: var(--black);
+            transition: opacity 0.2s;
+        }
+        .article:hover .article-title { opacity: 0.65; }
+        .article-big .article-title  { font-size: 1.8rem; margin-bottom: 14px; }
+        .article-sm .article-title   { font-size: 1.15rem; }
+        .article-grid .article-title { font-size: 1.35rem; margin-bottom: 10px; }
+        .article-excerpt {
+            font-size: 0.82rem; font-weight: 300;
+            color: var(--gray); line-height: 1.7;
+            display: -webkit-box; -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical; overflow: hidden;
+        }
+        .article-meta {
+            font-size: 0.6rem; letter-spacing: 0.12em;
+            text-transform: uppercase; color: var(--gray);
+            margin-top: 14px;
+        }
+        .article-sm .article-excerpt { display: none; }
+
+        /* ── 3-COL GRID ─────────────────────── */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--product-gap) 40px; /* The Row: 60px vertical gap */
+        }
+
+        /* ── DISCLOSURE ──────────────────────── */
+        .disclosure {
+            padding: 28px 0;
+            font-size: 0.72rem; font-weight: 300;
+            color: var(--gray); letter-spacing: 0.01em;
+            border-top: 1px solid var(--subtle);
+            border-bottom: 1px solid var(--subtle);
+            margin-bottom: 0;
+        }
+        .disclosure a { color: var(--black); text-decoration: underline; text-underline-offset: 3px; }
+
+        /* ── AD SLOT ─────────────────────────── */
+        .ad-slot {
+            padding: 20px 0; text-align: center;
+            min-height: 90px; display: flex;
+            align-items: center; justify-content: center;
+        }
+
+        /* ── FOOTER ──────────────────────────── */
+        footer {
+            background: var(--black); color: rgba(255,255,255,0.4);
+            padding: 80px 48px 40px;
+            margin-top: 80px;
+        }
+        .footer-inner {
+            max-width: 1320px; margin: 0 auto;
+            display: grid; grid-template-columns: 2fr 1fr 1fr;
+            gap: 64px; padding-bottom: 56px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .footer-brand {
+            font-family: var(--font-disp); font-style: italic;
+            font-size: 1.5rem; color: var(--white);
+            margin-bottom: 20px; display: block;
+        }
+        .footer-desc { font-size: 0.78rem; line-height: 1.9; font-weight: 300; }
+        .footer-col h4 {
+            font-size: 0.6rem; letter-spacing: 0.2em;
+            text-transform: uppercase; font-weight: 500;
+            color: rgba(255,255,255,0.25); margin-bottom: 20px;
+        }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 10px; }
+        .footer-col a {
+            color: rgba(255,255,255,0.4); text-decoration: none;
+            font-size: 0.78rem; font-weight: 300;
+            transition: color 0.2s;
+        }
+        .footer-col a:hover { color: var(--white); }
+        .footer-bottom {
+            max-width: 1320px; margin: 32px auto 0;
+            display: flex; justify-content: space-between;
+            font-size: 0.62rem; letter-spacing: 0.1em;
+            text-transform: uppercase; color: rgba(255,255,255,0.2);
+        }
+        .footer-bottom a { color: rgba(255,255,255,0.2); text-decoration: none; }
+        .footer-bottom a:hover { color: rgba(255,255,255,0.5); }
+
+        /* ── MOBILE ──────────────────────────── */
+        @media (max-width: 1024px) {
+            .nav-inner, .wrap { padding: 0 24px; }
+            .hero-content { padding: 0 24px 48px; }
+            .hero-scroll { display: none; }
+            .grid-featured { grid-template-columns: 1fr; gap: 32px; }
+            .grid-3 { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+            .footer { padding: 48px 24px 32px; }
+            .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+        }
+        @media (max-width: 640px) {
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: var(--white); padding: 16px 24px; border-bottom: 1px solid var(--subtle); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
             .nav-links.open { display: flex; }
-            .nav-links a { padding: 10px 0; border-radius: 0; }
             .nav-toggle { display: block; }
-            .hero-shapes, .hero-shapes2 { display: none; }
-            .newsletter-form { flex-direction: column; }
-        }
-        @media (max-width: 480px) {
-            .grid-cards { grid-template-columns: 1fr; }
+            .nav-date { display: none; }
+            .hero { height: 80vh; }
+            .hero-title { font-size: 2.4rem; }
+            .grid-3 { grid-template-columns: 1fr; }
+            .section { padding: 48px 0; }
+            .section-head { margin-bottom: 32px; }
+            .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-ticker"><span>Trending Now &nbsp;&bull;&nbsp; Spring 2026 Fashion Drops &nbsp;&bull;&nbsp; Best Dupes This Week &nbsp;&bull;&nbsp; Affordable Alternatives That Actually Look Expensive</span></div>
-        <div class="nav-inner">
-            <a href="/" class="nav-brand">TREND<span>LOOP</span> USA</a>
-            <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/about.html">About</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-                <li><a href="/privacy.html">Privacy</a></li>
-                <li><a href="/disclaimer.html">Disclaimer</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <!-- Category Pills -->
-    <div class="categories">
-        <div class="cat-inner">
-            <a href="/" class="cat-pill active">All</a>
-            <a href="/" class="cat-pill">Trending</a>
-            <a href="/" class="cat-pill">Street Style</a>
-            <a href="/" class="cat-pill">Luxury</a>
-            <a href="/" class="cat-pill">Best Dupes</a>
-            <a href="/" class="cat-pill">Budget Finds</a>
-            <a href="/" class="cat-pill">Sustainable</a>
-            <a href="/" class="cat-pill">Guides</a>
-            <a href="/" class="cat-pill">Celebrity Style</a>
-            <a href="/" class="cat-pill">Fashion Comeback</a>
-        </div>
+<!-- Navigation -->
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="/" class="nav-brand">TrendLoop USA</a>
+        <span class="nav-date" id="nav-date"></span>
+        <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/privacy.html">Privacy</a></li>
+            <li><a href="/disclaimer.html">Disclaimer</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-bg-fallback"></div>
+    <img class="hero-img" src="/images/hero-editorial.jpg" alt="TrendLoop USA Editorial" loading="eager" fetchpriority="high" onerror="this.style.display='none'">
+    <div class="hero-content">
+        <p class="hero-issue">Vol. I &nbsp;/&nbsp; SS 2026</p>
+        <h1 class="hero-title">The Quiet Power<br>of Considered Style</h1>
+        <p class="hero-sub">Expert trend analysis and editorial perspective — the fashion intelligence you actually need.</p>
+    </div>
+    <div class="hero-scroll">Scroll</div>
+</section>
+
+<!-- Main Content -->
+<div class="wrap">
+    <!-- Disclosure -->
+    <div class="disclosure">
+        This site contains affiliate links. We may earn a small commission when you purchase through our links — at no additional cost to you. <a href="/disclaimer.html">Full disclosure</a>.
     </div>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="hero-shapes"></div>
-        <div class="hero-shapes2"></div>
-        <img class="hero-img"
-             src="/images/hero-editorial.webp"
-             alt="TrendLoop USA - Fashion Editorial 2026"
-             onerror="this.style.display='none'">
-        <div class="hero-content">
-            <span class="hero-badge"><span class="dot"></span> Live Trending</span>
-            <h1>Your Daily Dose of <em>Fashion</em> Intelligence</h1>
-            <p>AI-powered trend analysis, the best dupes, affordable alternatives, and daily style inspiration for the fashion-obsessed.</p>
-        </div>
-    </section>
-
-    <!-- Hot Takes Strip -->
-    <div class="hot-strip">
-        <div class="hot-inner">
-            <span class="hot-tag">Hot</span>
-            <span class="hot-item"><strong>#1</strong> 90s Minimalism Is Back</span>
-            <span class="hot-item"><strong>#2</strong> Best Dupes Under $50</span>
-            <span class="hot-item"><strong>#3</strong> SS26 Runway Breakdown</span>
-            <span class="hot-item"><strong>#4</strong> Capsule Wardrobe 2026</span>
-            <span class="hot-item"><strong>#5</strong> Designer Handbag Guide</span>
-            <span class="hot-item"><strong>#6</strong> Sustainable Picks</span>
-        </div>
+    <!-- Ad -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8049649445649586" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 
-    <!-- Main Content -->
-    <div class="container">
-        <!-- Affiliate Disclosure -->
-        <div class="disclosure">
-            This site contains affiliate links. When you buy through our links, we may earn a small commission at no extra cost to you. <a href="/disclaimer.html">Learn more</a>.
-        </div>
-
-        <!-- Trending Now Bar -->
-        <div class="trending-bar">
-            <span class="trending-label">Trending</span>
-            <div class="trending-items">
-                <a class="trending-item" href="/posts/001.html"><span class="trending-num">01</span>90s Minimalism</a>
-                <a class="trending-item" href="/2026-02-20-flattering-plus-size-outfit-ideas-for-summer-vacations-2026.html"><span class="trending-num">02</span>Plus Size Summer</a>
-                <a class="trending-item" href="/2026-02-20-investing-in-a-classic-designer-handbag-what-to-consider-now.html"><span class="trending-num">03</span>Designer Bags</a>
-                <a class="trending-item" href="/2026-02-20-best-affordable-denim-jeans-under-50-for-women-s-everyday-we.html"><span class="trending-num">04</span>Denim Under $50</a>
-                <a class="trending-item" href="/2026-02-20-top-sustainable-fashion-trends-shaping-2026-style-choices.html"><span class="trending-num">05</span>Sustainable Fashion</a>
-            </div>
-        </div>
-
-        <!-- Top Ad Slot -->
-        <div class="ad-slot">
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8049649445649586" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        </div>
-
-        <!-- TOP STORIES -->
+    <!-- Featured -->
+    <section class="section">
         <div class="section-head">
-            <h2>Top <span class="accent">Stories</span></h2>
-            <a href="/" class="more">View All</a>
+            <div>
+                <span class="label">Editor's Selection</span>
+                <h2>Top Stories</h2>
+            </div>
+            <a href="/">View all</a>
         </div>
 
         <div class="grid-featured">
-            <!-- Main Story -->
-            <div class="card card-big">
-                <a href="/posts/001.html">
-                    <div class="card-img-wrap">
-                        <img class="card-img" src="/images/card-minimalism.webp" alt="90s Minimalism Fashion Editorial" style="height:340px"
-                             onerror="this.outerHTML='&lt;div class=&quot;card-img img-placeholder img-fashion&quot; style=&quot;height:340px&quot;&gt;STYLE&lt;/div&gt;'">
+            <a class="article article-big" href="/2026-02-20-ss26-the-ethereal-edge-of-elevated-luxury-navigating-the-new.html">
+                <div class="article-img-wrap">
+                    <img loading="lazy" src="/images/hero-editorial.jpg" alt="SS26 Editorial" onerror="this.style.display='none'; this.parentNode.classList.add('article-img-placeholder')">
+                </div>
+                <span class="article-cat">Analysis</span>
+                <h3 class="article-title">SS26: The Ethereal Edge of Elevated Luxury</h3>
+                <p class="article-excerpt">Navigating the new wave of elevated fashion — where ethereal textures meet bold architectural silhouettes, and the result feels genuinely novel.</p>
+                <p class="article-meta">Feb 20, 2026 &nbsp;&mdash;&nbsp; 6 min read</p>
+            </a>
+
+            <div class="grid-side">
+                <a class="article article-sm" href="/2026-02-22-the-quiet-luxury-aesthetic-how-to-dress-the-part.html">
+                    <div class="article-img-wrap">
+                        <img loading="lazy" src="/images/feat-luxury.jpg" alt="Quiet Luxury" onerror="this.style.display='none'; this.parentNode.classList.add('article-img-placeholder')">
                     </div>
-                    <div class="card-body">
-                        <span class="card-tag tag-featured">Featured</span>
-                        <h3>The Enduring Allure of 90s Minimalism: A Refined Resurgence</h3>
-                        <p class="excerpt">Clean lines, impeccable fabrication, a pared-back palette -- the 90s minimalist aesthetic is luxury now. Here's how to wear it without looking like a time capsule.</p>
-                        <p class="meta"><span>TrendLoop USA Team</span><span class="meta-dot"></span><span>Feb 23, 2026</span><span class="meta-dot"></span><span>8 min read</span></p>
+                    <span class="article-cat">Trend</span>
+                    <h3 class="article-title">The Quiet Luxury Aesthetic: How to Dress the Part</h3>
+                    <p class="article-meta">Feb 22, 2026</p>
+                </a>
+                <a class="article article-sm" href="/2026-02-20-investing-in-a-classic-designer-handbag-what-to-consider-now.html">
+                    <div class="article-img-wrap">
+                        <img loading="lazy" src="/images/feat-style.jpg" alt="Designer Handbag" onerror="this.style.display='none'; this.parentNode.classList.add('article-img-placeholder')">
                     </div>
+                    <span class="article-cat">Investment</span>
+                    <h3 class="article-title">Investing in a Classic Designer Handbag</h3>
+                    <p class="article-meta">Feb 20, 2026</p>
+                </a>
+                <a class="article article-sm" href="/2026-02-22-spring-2026-fashion-trends-straight-from-the-runway.html">
+                    <div class="article-img-wrap">
+                        <img loading="lazy" src="/images/feat-trend.jpg" alt="Spring 2026" onerror="this.style.display='none'; this.parentNode.classList.add('article-img-placeholder')">
+                    </div>
+                    <span class="article-cat">Runway</span>
+                    <h3 class="article-title">Spring 2026 Trends Straight From the Runway</h3>
+                    <p class="article-meta">Feb 22, 2026</p>
                 </a>
             </div>
-
-            <!-- Side Stories -->
-            <div style="display:flex;flex-direction:column;gap:16px">
-                <div class="card card-sm">
-                    <a href="/2026-02-20-flattering-plus-size-outfit-ideas-for-summer-vacations-2026.html">
-                        <div class="card-img-wrap">
-                            <img class="card-img" src="/images/card-summer.webp" alt="Summer Fashion 2026" style="height:155px"
-                                 onerror="this.outerHTML='&lt;div class=&quot;card-img img-placeholder img-summer&quot; style=&quot;height:155px&quot;&gt;SUMMER&lt;/div&gt;'">
-                        </div>
-                        <div class="card-body">
-                            <span class="card-tag tag-trending">Trending</span>
-                            <h3>Flattering Plus Size Outfit Ideas for Summer 2026</h3>
-                            <p class="meta"><span>Feb 20, 2026</span><span class="meta-dot"></span><span>6 min</span></p>
-                        </div>
-                    </a>
-                </div>
-                <div class="card card-sm">
-                    <a href="/2026-02-20-investing-in-a-classic-designer-handbag-what-to-consider-now.html">
-                        <div class="card-img-wrap">
-                            <img class="card-img" src="/images/card-handbag.webp" alt="Designer Handbag Guide" style="height:155px"
-                                 onerror="this.outerHTML='&lt;div class=&quot;card-img img-placeholder img-handbag&quot; style=&quot;height:155px&quot;&gt;LUXURY&lt;/div&gt;'">
-                        </div>
-                        <div class="card-body">
-                            <span class="card-tag tag-guide">Guide</span>
-                            <h3>Investing in a Classic Designer Handbag: What to Know</h3>
-                            <p class="meta"><span>Feb 20, 2026</span><span class="meta-dot"></span><span>7 min</span></p>
-                        </div>
-                    </a>
-                </div>
-            </div>
         </div>
+    </section>
 
-        <!-- MORE STORIES -->
+    <!-- More Stories -->
+    <section class="section">
         <div class="section-head">
-            <h2>More <span class="accent">Stories</span></h2>
-            <a href="/" class="more">Explore</a>
+            <div>
+                <span class="label">Style Guides</span>
+                <h2>More to Read</h2>
+            </div>
+            <a href="/">Explore all</a>
         </div>
 
-        <div class="grid-cards">
-            <div class="card card-sm">
-                <a href="/2026-02-20-ss26-the-ethereal-edge-of-elevated-luxury-navigating-the-new.html">
-                    <div class="card-img-wrap">
-                        <img class="card-img" src="/images/card-luxury.webp" alt="SS26 Luxury Fashion" style="height:200px"
-                             onerror="this.outerHTML='&lt;div class=&quot;card-img img-placeholder img-luxury&quot; style=&quot;height:200px&quot;&gt;SS26&lt;/div&gt;'">
-                    </div>
-                    <div class="card-body">
-                        <span class="card-tag tag-style">Analysis</span>
-                        <h3>SS26: The Ethereal Edge of Elevated Luxury</h3>
-                        <p class="excerpt">Navigating the new wave of elevated fashion with ethereal textures and bold silhouettes.</p>
-                        <p class="meta"><span>Feb 20, 2026</span><span class="meta-dot"></span><span>9 min</span></p>
-                    </div>
-                </a>
-            </div>
+        <div class="grid-3">
+            <a class="article article-grid" href="/2026-02-20-the-complete-guide-to-building-a-minimalist-capsule-wardrobe.html">
+                <div class="article-img-wrap">
+                    <img loading="lazy" src="/images/feat-trend.jpg" alt="Capsule Wardrobe" onerror="this.style.display='none'; this.parentNode.classList.add('article-img-placeholder')">
+                </div>
+                <span class="article-cat">Guide</span>
+                <h3 class="article-title">Building a Minimalist Capsule Wardrobe</h3>
+                <p class="article-excerpt">Simplify your closet, maximise your outfits.</p>
+                <p class="article-meta">Feb 20, 2026</p>
+            </a>
 
-            <div class="card card-sm">
-                <a href="/2026-02-20-style-alert-decoding-today-s-hottest-fashion-trend.html">
-                    <div class="card-img-wrap">
-                        <img class="card-img" src="/images/hero-editorial.webp" alt="Hottest Fashion Trends 2026" style="height:200px"
-                             onerror="this.outerHTML='&lt;div class=&quot;card-img img-placeholder img-alert&quot; style=&quot;height:200px&quot;&gt;HOT&lt;/div&gt;'">
-                    </div>
-                    <div class="card-body">
-                        <span class="card-tag tag-hot">Hot</span>
-                        <h3>Style Alert: Decoding Today's Hottest Fashion Trends</h3>
-                        <p class="excerpt">Breaking down the most viral fashion moments and how to recreate them for less.</p>
-                        <p class="meta"><span>Feb 20, 2026</span><span class="meta-dot"></span><span>5 min</span></p>
-                    </div>
-                </a>
-            </div>
+            <a class="article article-grid" href="/2026-02-20-top-sustainable-fashion-trends-shaping-2026-style-choices.html">
+                <div class="article-img-wrap">
+                    <img loading="lazy" src="/images/feat-sustainable.jpg" alt="Sustainable Fashion" onerror="this.style.display='none'; this.parentNode.classList.add('article-img-placeholder')">
+                </div>
+                <span class="article-cat">Sustainability</span>
+                <h3 class="article-title">Sustainable Fashion Trends Shaping 2026</h3>
+                <p class="article-excerpt">How to build an eco-conscious wardrobe without compromise.</p>
+                <p class="article-meta">Feb 20, 2026</p>
+            </a>
 
-            <div class="card card-sm">
-                <a href="/2026-02-20-top-sustainable-fashion-trends-shaping-2026-style-choices.html">
-                    <div class="card-img-wrap">
-                        <img class="card-img" src="/images/card-sustainable.webp" alt="Sustainable Fashion 2026" style="height:200px"
-                             onerror="this.outerHTML='&lt;div class=&quot;card-img img-placeholder img-eco&quot; style=&quot;height:200px&quot;&gt;ECO&lt;/div&gt;'">
-                    </div>
-                    <div class="card-body">
-                        <span class="card-tag tag-guide">Guide</span>
-                        <h3>Top Sustainable Fashion Trends Shaping 2026</h3>
-                        <p class="excerpt">How to build an eco-conscious wardrobe without sacrificing style or your budget.</p>
-                        <p class="meta"><span>Feb 20, 2026</span><span class="meta-dot"></span><span>7 min</span></p>
-                    </div>
-                </a>
-            </div>
+            <a class="article article-grid" href="/2026-02-20-best-affordable-denim-jeans-under-50-for-women-s-everyday-we.html">
+                <div class="article-img-wrap">
+                    <img loading="lazy" src="/images/feat-denim.jpg" alt="Denim Guide" onerror="this.style.display='none'; this.parentNode.classList.add('article-img-placeholder')">
+                </div>
+                <span class="article-cat">Budget</span>
+                <h3 class="article-title">Best Affordable Denim Under $50</h3>
+                <p class="article-excerpt">Great jeans don't require a fortune.</p>
+                <p class="article-meta">Feb 20, 2026</p>
+            </a>
 
-            <div class="card card-sm">
-                <a href="/2026-02-20-how-to-style-a-blazer-with-jeans-for-smart-casual-look.html">
-                    <div class="card-img-wrap">
-                        <img class="card-img" src="/images/card-blazer.webp" alt="Blazer Style Guide" style="height:200px"
-                             onerror="this.outerHTML='&lt;div class=&quot;card-img img-placeholder img-blazer&quot; style=&quot;height:200px&quot;&gt;STYLE&lt;/div&gt;'">
-                    </div>
-                    <div class="card-body">
-                        <span class="card-tag tag-style">Style</span>
-                        <h3>How to Style a Blazer with Jeans for Smart Casual</h3>
-                        <p class="excerpt">Master the blazer-and-jeans combo for work, dates, and weekend brunch.</p>
-                        <p class="meta"><span>Feb 20, 2026</span><span class="meta-dot"></span><span>6 min</span></p>
-                    </div>
-                </a>
-            </div>
+            <a class="article article-grid" href="/2026-02-22-gen-z-s-favorite-aesthetics-what-s-trending-now.html">
+                <div class="article-img-wrap">
+                    <img loading="lazy" src="/images/feat-style.jpg" alt="Gen Z Aesthetics" onerror="this.style.display='none'; this.parentNode.classList.add('article-img-placeholder')">
+                </div>
+                <span class="article-cat">Culture</span>
+                <h3 class="article-title">Gen Z Aesthetics: What's Trending Now</h3>
+                <p class="article-excerpt">The visual languages dominating screens and streets.</p>
+                <p class="article-meta">Feb 22, 2026</p>
+            </a>
 
-            <div class="card card-sm">
-                <a href="/2026-02-20-best-affordable-denim-jeans-under-50-for-women-s-everyday-we.html">
-                    <div class="card-img-wrap">
-                        <img class="card-img" src="/images/card-minimalism.webp" alt="Best Affordable Denim Jeans" style="height:200px"
-                             onerror="this.outerHTML='&lt;div class=&quot;card-img img-placeholder img-denim&quot; style=&quot;height:200px&quot;&gt;DENIM&lt;/div&gt;'">
-                    </div>
-                    <div class="card-body">
-                        <span class="card-tag tag-budget">Budget</span>
-                        <h3>Best Affordable Denim Jeans Under $50 for Women</h3>
-                        <p class="excerpt">Great jeans don't have to cost a fortune. Our tested picks for the best budget denim.</p>
-                        <p class="meta"><span>Feb 20, 2026</span><span class="meta-dot"></span><span>8 min</span></p>
-                    </div>
-                </a>
-            </div>
+            <a class="article article-grid" href="/2026-02-20-how-to-style-a-blazer-with-jeans-for-smart-casual-look.html">
+                <div class="article-img-wrap">
+                    <img loading="lazy" src="/images/feat-sustainable.jpg" alt="Blazer Styling" onerror="this.style.display='none'; this.parentNode.classList.add('article-img-placeholder')">
+                </div>
+                <span class="article-cat">Style</span>
+                <h3 class="article-title">How to Style a Blazer with Jeans</h3>
+                <p class="article-excerpt">The smart casual formula that never fails.</p>
+                <p class="article-meta">Feb 20, 2026</p>
+            </a>
 
-            <div class="card card-sm">
-                <a href="/2026-02-20-the-complete-guide-to-building-a-minimalist-capsule-wardrobe.html">
-                    <div class="card-img-wrap">
-                        <img class="card-img" src="/images/card-sustainable.webp" alt="Minimalist Capsule Wardrobe Guide" style="height:200px"
-                             onerror="this.outerHTML='&lt;div class=&quot;card-img img-placeholder img-capsule&quot; style=&quot;height:200px&quot;&gt;CAPSULE&lt;/div&gt;'">
-                    </div>
-                    <div class="card-body">
-                        <span class="card-tag tag-guide">Guide</span>
-                        <h3>Building a Minimalist Capsule Wardrobe in 2026</h3>
-                        <p class="excerpt">Simplify your closet and maximize your outfits with this step-by-step guide.</p>
-                        <p class="meta"><span>Feb 20, 2026</span><span class="meta-dot"></span><span>10 min</span></p>
-                    </div>
-                </a>
-            </div>
+            <a class="article article-grid" href="/2026-02-22-athleisure-s-evolution-from-gym-to-street-style-2026.html">
+                <div class="article-img-wrap">
+                    <img loading="lazy" src="/images/feat-denim.jpg" alt="Athleisure 2026" onerror="this.style.display='none'; this.parentNode.classList.add('article-img-placeholder')">
+                </div>
+                <span class="article-cat">Trend</span>
+                <h3 class="article-title">Athleisure's Evolution: Gym to Street 2026</h3>
+                <p class="article-excerpt">Performance wear has permanently changed how we dress.</p>
+                <p class="article-meta">Feb 22, 2026</p>
+            </a>
         </div>
+    </section>
 
-        <!-- Mid Ad Slot -->
-        <div class="ad-slot">
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8049649445649586" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    <!-- Bottom Ad -->
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8049649445649586" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-inner">
+        <div>
+            <span class="footer-brand">TrendLoop USA</span>
+            <p class="footer-desc">Expert fashion advice, trend analysis, and curated product picks. We help you make considered style decisions — without the noise.</p>
+            <p style="margin-top:16px;font-size:0.72rem">contact@trendloopusa.net</p>
         </div>
-
-        <!-- BEST DUPES & AFFORDABLE ALTERNATIVES -->
-        <div class="section-head">
-            <h2>Best <span class="accent">Dupes</span> &amp; Alternatives</h2>
-            <a href="/" class="more">See All</a>
+        <div class="footer-col">
+            <h4>Navigate</h4>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/feed.xml">RSS</a></li>
+            </ul>
         </div>
-
-        <div class="grid-2col">
-            <div class="card" style="display:flex;flex-direction:row;align-items:center;overflow:hidden">
-                <div style="flex-shrink:0;width:130px">
-                    <div class="img-placeholder img-dupe" style="height:130px;font-size:1.4em">DUPE</div>
-                </div>
-                <div class="card-body">
-                    <span class="card-tag tag-dupe">Dupe</span>
-                    <h3 style="font-size:1em">Bottega Jodie Bag Dupes That Look Designer</h3>
-                    <p class="meta"><span>Feb 22, 2026</span></p>
-                </div>
-            </div>
-
-            <div class="card" style="display:flex;flex-direction:row;align-items:center;overflow:hidden">
-                <div style="flex-shrink:0;width:130px">
-                    <div class="img-placeholder img-fashion" style="height:130px;font-size:1.4em">ALT</div>
-                </div>
-                <div class="card-body">
-                    <span class="card-tag tag-budget">Affordable Alt</span>
-                    <h3 style="font-size:1em">Loewe Puzzle Bag Alternatives Under $100</h3>
-                    <p class="meta"><span>Feb 21, 2026</span></p>
-                </div>
-            </div>
-
-            <div class="card" style="display:flex;flex-direction:row;align-items:center;overflow:hidden">
-                <div style="flex-shrink:0;width:130px">
-                    <div class="img-placeholder img-summer" style="height:130px;font-size:1.4em">LOOK</div>
-                </div>
-                <div class="card-body">
-                    <span class="card-tag tag-dupe">Dupe</span>
-                    <h3 style="font-size:1em">Golden Goose Sneaker Dupes That Pass the Vibe Check</h3>
-                    <p class="meta"><span>Feb 19, 2026</span></p>
-                </div>
-            </div>
-
-            <div class="card" style="display:flex;flex-direction:row;align-items:center;overflow:hidden">
-                <div style="flex-shrink:0;width:130px">
-                    <div class="img-placeholder img-eco" style="height:130px;font-size:1.4em">FIND</div>
-                </div>
-                <div class="card-body">
-                    <span class="card-tag tag-budget">Budget Find</span>
-                    <h3 style="font-size:1em">Affordable Cashmere Sweaters That Feel Expensive</h3>
-                    <p class="meta"><span>Feb 18, 2026</span></p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Newsletter -->
-        <div class="newsletter">
-            <h3>Stay Ahead of the Trend</h3>
-            <p>Get the hottest looks, best dupes, and style guides delivered every morning. Free, always.</p>
-            <form class="newsletter-form" onsubmit="return false;">
-                <input type="email" placeholder="your@email.com" aria-label="Email address">
-                <button type="submit">Subscribe</button>
-            </form>
-        </div>
-
-        <!-- Bottom Ad Slot -->
-        <div class="ad-slot">
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8049649445649586" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        <div class="footer-col">
+            <h4>Legal</h4>
+            <ul>
+                <li><a href="/privacy.html">Privacy Policy</a></li>
+                <li><a href="/disclaimer.html">Disclaimer & FTC</a></li>
+            </ul>
         </div>
     </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 TrendLoop USA. All rights reserved.</p>
+        <a href="/disclaimer.html">Affiliate Disclosure</a>
+    </div>
+</footer>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-inner">
-            <div>
-                <div class="footer-brand">TREND<span>LOOP</span> USA</div>
-                <p>AI-powered fashion trends, the best dupes, and daily style inspiration for the fashion-obsessed. Updated daily.</p>
-                <p style="margin-top: 12px;font-size:0.85em;">Contact: <a href="mailto:contact@trendloopusa.net">contact@trendloopusa.net</a></p>
-                <div class="footer-social">
-                    <a class="social-link" href="https://twitter.com/TrendLoopUSA" aria-label="Twitter" rel="noopener noreferrer">X</a>
-                    <a class="social-link" href="https://pinterest.com/trendloopusa" aria-label="Pinterest" rel="noopener noreferrer">P</a>
-                </div>
-            </div>
-            <div>
-                <h4>Explore</h4>
-                <ul class="footer-links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">Trending</a></li>
-                    <li><a href="/">Best Dupes</a></li>
-                    <li><a href="/">Style Guides</a></li>
-                    <li><a href="/about.html">About Us</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Categories</h4>
-                <ul class="footer-links">
-                    <li><a href="/">Street Style</a></li>
-                    <li><a href="/">Luxury</a></li>
-                    <li><a href="/">Budget Finds</a></li>
-                    <li><a href="/">Sustainable</a></li>
-                    <li><a href="/">Celebrity Style</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Legal</h4>
-                <ul class="footer-links">
-                    <li><a href="/privacy.html">Privacy Policy</a></li>
-                    <li><a href="/disclaimer.html">Disclaimer &amp; FTC</a></li>
-                    <li><a href="/terms.html">Terms of Service</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                    <li><a href="/feed.xml">RSS Feed</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 TrendLoop USA. All rights reserved.</p>
-            <p><a href="/disclaimer.html">Affiliate Disclosure</a> &bull; Amazon Associates participant</p>
-        </div>
-    </footer>
+<script>
+    // Date in nav
+    const d = new Date();
+    const opts = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById('nav-date').textContent = d.toLocaleDateString('en-US', opts);
+</script>
 </body>
 </html>
