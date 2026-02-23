@@ -105,7 +105,7 @@ Write an engaging, SEO-optimized blog post about today's hottest fashion trends.
 8. Use H2 subheadings for each trend
 9. Output pure HTML content (no ```html``` markers, no <html>/<head>/<body> tags - just the article content)
 10. Add a small disclaimer at the bottom: "This post contains affiliate links. We may earn a commission at no extra cost to you."
-11. Add this image right after the H1 title: <img src="{image_url}" alt="{keyword_names[0]} fashion trend" style="width:100%; border-radius:8px; margin: 20px 0;">
+11. Add this image right after the H1 title: <img src="{image_url}" onerror="this.src='https://placehold.co/600x400?text=Image_Fallback'"  alt="{keyword_names[0]} fashion trend" style="width:100%; border-radius:8px; margin: 20px 0;">
 
 Write the blog post now:"""
 
